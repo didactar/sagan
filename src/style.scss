@@ -1,0 +1,33 @@
+@import './workshop/style.scss';
+
+
+* {
+    font-family: 'Open Sans', sans-serif;
+    word-wrap: break-word;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.fa {
+    width: 1em;
+    text-align: center;
+}
+
+.main-column {
+    margin: 0 auto;
+    width: 90%;
+    max-width: 850px;
+    padding: 0 1em;
+    position: relative;
+    overflow: hidden;
+}
+
+.loading {
+    font-size: 2em;
+    text-align: center;
+    margin: 3em 0;
+    color: #777;
+}

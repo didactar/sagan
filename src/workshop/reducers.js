@@ -1,13 +1,19 @@
+import { combineReducers } from 'redux'
+import calendar from './calendar/reducers'
+import event from './event/reducers'
+
+import { SHOW_GUIDE, SHOW_CALENDAR, SHOW_EVENT, SHOW_COMMUNITY } from './actions'
 import { REQUEST_WORKSHOP, RECEIVE_WORKSHOP } from './actions'
 
 
 const defaultState = {
-    fetching: false, 
+    content: 'guide',
+    fetching: true, 
     workshop: {}
 }
 
 
-export default (state = defaultState, action) => {
+const workshop = (state = defaultState, action) => {
 
   switch (action.type) {
 
@@ -24,9 +30,39 @@ export default (state = defaultState, action) => {
         workshop: action.workshop
       }
 
+    case SHOW_CALENDAR:
+      return {
+        ...state,
+        content: 'calendar'
+      }
+
+    case SHOW_EVENT:
+      return {
+        ...state,
+        content: 'event'
+      }
+
+    case SHOW_GUIDE:
+      return {
+        ...state,
+        content: 'guide'
+      }
+
+    case SHOW_COMMUNITY:
+      return {
+        ...state,
+        content: 'community'
+      }
+
     default:
       return state
 
   }
 
 }
+
+
+
+export default combineReducers({
+    workshop, calendar, event
+})
