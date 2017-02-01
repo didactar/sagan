@@ -2,33 +2,32 @@ import React, { Component, PropTypes } from 'react'
 import { connect } from 'react-redux'
 import { fetchWorkshopsIfNeeded } from './actions'
 import WorkshopList from './WorkshopList'
+import Topbar from '../shared/topbar/container'
 
 
 class Explore extends Component {
 
     static propTypes = {
         items: PropTypes.array.isRequired,
-        fetching: PropTypes.bool.isRequired,
+        fetching: PropTypes.bool.isRequired
     }
 
-    componentDidMount() {
+    componentDidMount = () => 
         this.props.dispatch(fetchWorkshopsIfNeeded())
-    }
 
-    render() {
-        return <WorkshopList 
-                    workshops={this.props.items} 
-                    fetching={this.props.fetching} 
-                />
-    }
+    render = () =>
+        <div>
+            <Topbar /> 
+            <WorkshopList 
+                workshops={this.props.items} 
+                fetching={this.props.fetching} 
+            />
+        </div>
 
 }
 
 
-const mapStateToProps = state => {
-    const { items, fetching } = state.explore
-    return { items, fetching }
-}
+const mapStateToProps = state => state.explore
 
 
 export default connect(mapStateToProps)(Explore)

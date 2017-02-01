@@ -1,15 +1,18 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import Welcome from './Welcome'
+import Topbar from '../shared/topbar/container'
 
 
-class App extends Component {
+class WelcomeContainer extends Component {
 
-    render() {
-        return <Welcome />
-    }
+    render = () =>
+        <div>
+            <Topbar />
+            <Welcome />
+        </div>
 
 }
 
 
-export default connect()(App)
+export default connect()(WelcomeContainer)

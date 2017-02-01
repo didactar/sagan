@@ -1,6 +1,7 @@
 ass-cache
 node_modules
 npm-debug.log
+font_awesome
 *.swp
 logs
 static
