@@ -6,3 +6,4 @@ font_awesome
 logs
 static
 public/css
+.sass-cache
