@@ -33,7 +33,7 @@ const Workshop = ({workshop, content, showGuide, showCalendar, showEvent}) =>
 
 const WorkshopWrapper = ({workshop, fetching, content, showGuide, showCalendar, showEvent}) =>
     <div>
-        <Topbar />
+        <Topbar color='dark' />
         {fetching
             ? <Loading />
             : <Workshop 

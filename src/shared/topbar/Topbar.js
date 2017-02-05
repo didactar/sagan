@@ -1,39 +1,40 @@
 import React from 'react'
 
 
-const Notifications = () =>
+const UserButton = () =>
     <a href='/'>
-        <i className='topbar-icon fa fa-bell'></i>
+        <i 
+            className='topbar-menu-button fa fa-user'
+        ></i>
     </a>
 
 
-const Favorites = () =>
+const Brand = () =>
+    <span className='topbar-brand'>
+        didactar
+    </span>
+
+
+const HomeButton = () =>
     <a href='/'>
-        <i className='topbar-icon fa fa-heart'></i>
+        <i className='topbar-home-button fa fa-home'></i>
     </a>
 
 
-const Explore = () =>
-    <a href='/explore'>
-        <i className='topbar-icon fa fa-search'></i>
-    </a>
-
-
-const Home = () =>
-    <a href='/'>
-        <i className='topbar-icon fa fa-home'></i>
-    </a>
-
-
-const TopbarWrapper = () =>
-    <div className='topbar'>
+const Topbar = ({theme}) =>
+    <div className={'topbar ' + theme } >
         <div className='main-column'>
-            <Home />
-            <Explore />
-            <Favorites />
-            <Notifications />
+            <HomeButton />
+            <Brand />
+            <UserButton />
         </div>
     </div>
+
+
+const TopbarWrapper = ({color}) =>
+    color === 'dark'
+        ? <Topbar theme='topbar-dark' />
+        : <Topbar theme='topbar-white' />
 
 
 export default TopbarWrapper

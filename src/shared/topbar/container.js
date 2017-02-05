@@ -5,8 +5,7 @@ import Topbar from './Topbar'
 
 class TopbarContainer extends Component {
 
-    render = () => 
-        <Topbar />
+    render = () => <Topbar color={this.props.color} />
 
 }
 

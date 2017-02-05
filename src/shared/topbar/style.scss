@@ -1,0 +1,40 @@
+.topbar {
+    text-align: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9;
+}
+
+.topbar-white {
+    background: #fff;
+    color: #555;
+    .topbar-menu-button, .topbar-home-button {
+        color: #555;
+    }
+}
+
+.topbar-dark {
+    background: -moz-linear-gradient(top, #333, transparent);
+    padding: 0 0 3em;
+    color: #fff;
+    .topbar-menu-button, .topbar-home-button {
+        color: #fff;
+    }
+}
+
+.topbar-menu-button, .topbar-home-button {
+    cursor: pointer;    
+    padding: 0.9em;
+    font-size: 1.6em;
+}
+
+.topbar-home-buton {
+}
+
+.topbar-menu-button {
+}
+
+.topbar-brand {
+    font-size: 1.2em;
+}

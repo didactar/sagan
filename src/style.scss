@@ -1,4 +1,5 @@
 @import './workshop/style.scss';
+@import './shared/style.scss';
 
 
 * {
@@ -23,11 +24,4 @@ body {
     padding: 0 1em;
     position: relative;
     overflow: hidden;
-}
-
-.loading {
-    font-size: 2em;
-    text-align: center;
-    margin: 3em 0;
-    color: #777;
 }
