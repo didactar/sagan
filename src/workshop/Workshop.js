@@ -2,15 +2,22 @@ import React, { PropTypes } from 'react'
 import Topbar from '../shared/topbar/container'
 import Header from './header/Header'
 import Body from './body/Body'
-import Footer from './footer/Footer'
 import Loading from '../shared/loading/Loading'
 
 
 const Workshop = ({workshop, content, showGuide, showCalendar, showEvent}) =>
     <div>
-        <Header workshop={workshop} content={content} />
-        <Body workshop={workshop} content={content} showEvent={showEvent} />
-        <Footer workshop={workshop} content={content} showGuide={showGuide} showCalendar={showCalendar} />
+        <Header 
+            workshop={workshop} 
+            content={content} 
+            showGuide={showGuide} 
+            showCalendar={showCalendar} 
+        />
+        <Body 
+            workshop={workshop} 
+            content={content} 
+            showEvent={showEvent} 
+        />
     </div>
 
 

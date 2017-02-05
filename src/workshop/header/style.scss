@@ -1,18 +1,51 @@
+@import '../../mixins.scss';
+
 .workshop-header {
     margin: 0 0 2em;
+    height: 30em;    
+    position: relative;
+    background: #aaa;
 }
 
-.workshop-header-image {
-    height: 35em;    
-    position: relative;
-    background: #444;
+.workshop-header-degrade {
+    background: -moz-linear-gradient(top, transparent, rgba(3,3,3,0.3));
+    position: absolute;
+    bottom: 0;
+    height: 8em;
+    width: 100%;
 }
+
 
 .workshop-header-image-title {
     position: absolute;
-    bottom: 1.5em;
+    bottom: 2.5em;
     color: #fff;
     font-size: 2.5em;
     width: 100%;
     text-align: center;
+}
+
+.workshop-navbar {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.workshop-navbar-content {
+    @include main-column(); 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+}
+
+.workshop-navbar-icon {
+    padding: 1em 1.5em;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.4em;
+}
+
+.workshop-navbar-icon:hover {
+    color: #ccc;
 }
