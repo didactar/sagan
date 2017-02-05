@@ -1,0 +1,18 @@
+.workshops {
+}
+
+.workshop-item {
+    width: 10em;
+    height: 10em;
+    background: #555;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 0.4em;
+    cursor: pointer;
+}
+
+.workshop-item:hover {
+    background: #333;
+}
