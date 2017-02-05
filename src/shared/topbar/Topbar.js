@@ -2,7 +2,7 @@ import React from 'react'
 
 
 const UserButton = () =>
-    <a href='/'>
+    <a href='/profile'>
         <i 
             className='topbar-menu-button fa fa-user'
         ></i>
