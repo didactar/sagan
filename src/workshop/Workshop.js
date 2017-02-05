@@ -1,31 +1,15 @@
 import React, { PropTypes } from 'react'
 import Topbar from '../shared/topbar/container'
 import Header from './header/Header'
+import Body from './body/Body'
 import Footer from './footer/Footer'
-import Calendar from './calendar/container'
-import Event from './event/container'
-import Guide from './guide/Guide'
 import Loading from '../shared/loading/Loading'
-
-
-const Content = ({workshop, content, showEvent}) => {
-    switch (content) {
-        case 'guide':
-            return <Guide description={workshop.description}/>
-        case 'calendar':
-            return <Calendar workshop={workshop} showEvent={showEvent} />
-        case 'event':
-            return <Event workshop={workshop} />
-        default:
-            return null
-    }
-}
 
 
 const Workshop = ({workshop, content, showGuide, showCalendar, showEvent}) =>
     <div>
         <Header workshop={workshop} content={content} />
-        <Content workshop={workshop} content={content} showEvent={showEvent} />
+        <Body workshop={workshop} content={content} showEvent={showEvent} />
         <Footer workshop={workshop} content={content} showGuide={showGuide} showCalendar={showCalendar} />
     </div>
 

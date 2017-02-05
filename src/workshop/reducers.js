@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux'
-import calendar from './calendar/reducers'
-import event from './event/reducers'
+import calendar from './body/calendar/reducers'
+import event from './body/event/reducers'
 
 import { SHOW_GUIDE, SHOW_CALENDAR, SHOW_EVENT, SHOW_COMMUNITY } from './actions'
 import { REQUEST_WORKSHOP, RECEIVE_WORKSHOP } from './actions'

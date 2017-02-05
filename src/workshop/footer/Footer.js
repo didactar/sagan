@@ -11,11 +11,13 @@ const Button = ({content, icon, onClick}) =>
 
 const Footer = ({workshop, content, showGuide, showCalendar}) =>
     <div className='workshop-footer'>
-        <Button content={content} icon='fa-map-signs' onClick={showGuide} />
-        <Button content={content} icon='fa-calendar-o' onClick={showCalendar} />
-        <Button content={content} icon='fa-group' />
-        <Button content={content} icon='fa-bell' />
-        <Button content={content} icon='fa-heart-o' />
+        <div className='workshop-footer-content'>
+            <Button content={content} icon='fa-map-signs' onClick={showGuide} />
+            <Button content={content} icon='fa-calendar-o' onClick={showCalendar} />
+            <Button content={content} icon='fa-group' />
+            <Button content={content} icon='fa-bell' />
+            <Button content={content} icon='fa-heart-o' />
+        </div>
     </div>
 
 

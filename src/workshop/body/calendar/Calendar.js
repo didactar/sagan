@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react'
-import Loading from '../../shared/loading/Loading'
+import Loading from '../../../shared/loading/Loading'
 
 
 const Event = ({event, showEvent}) =>

@@ -23,7 +23,7 @@ const HomeButton = () =>
 
 const Topbar = ({theme}) =>
     <div className={'topbar ' + theme } >
-        <div className='main-column'>
+        <div className='topbar-content'>
             <HomeButton />
             <Brand />
             <UserButton />

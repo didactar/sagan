@@ -20,12 +20,9 @@ const Workshops = ({workshops}) =>
 
 
 const ListWrapper = ({workshops, fetching}) =>
-    <div className='main-column'>
-        {workshops.length === 0
-            ? (fetching ? <Loading /> : <h2>Empty.</h2>)
-            : <Workshops workshops={workshops} />
-        }
-    </div>
+    workshops.length === 0
+        ? (fetching ? <Loading /> : <h2>Empty.</h2>)
+        : <Workshops workshops={workshops} />
 
 
 ListWrapper.propTypes = {

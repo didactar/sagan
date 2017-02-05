@@ -2,7 +2,7 @@ import React, { PropTypes } from 'react'
 
 
 const Guide = ({description}) =>
-    <div className='main-column'>
+    <div>
         <h3>{description}</h3>
     </div>
 

@@ -1,3 +1,6 @@
+@import '../mixins.scss';
+
 .home {
-    margin: 10em 0 0;
+    @include main-column(); 
+    @include topbar-spacing(); 
 }
