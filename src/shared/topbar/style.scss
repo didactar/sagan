@@ -10,6 +10,10 @@
 
 .topbar-content {
     @include main-column(); 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
 }
 
 .topbar-white {
@@ -32,15 +36,9 @@
 .topbar-menu-button, .topbar-home-button {
     cursor: pointer;    
     padding: 0.9em;
-    font-size: 1.6em;
-}
-
-.topbar-home-buton {
-}
-
-.topbar-menu-button {
+    font-size: 1.7em;
 }
 
 .topbar-brand {
-    font-size: 1.2em;
+    font-size: 1.5em; 
 }

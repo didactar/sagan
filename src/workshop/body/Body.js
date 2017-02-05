@@ -20,5 +20,9 @@ const BodyContent = ({workshop, content, showEvent}) => {
 
 export default ({workshop, content, showEvent}) =>
     <div className='workshop-body'> 
-        <BodyContent workshop={workshop} content={content} showEvent={showEvent} />
+        <BodyContent 
+            workshop={workshop} 
+            content={content} 
+            showEvent={showEvent} 
+        />
     </div>

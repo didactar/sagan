@@ -8,6 +8,15 @@
     overflow: hidden;
 }
 
+@mixin main-column-wide() {
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    padding: 0 1em;
+    position: relative;
+    overflow: hidden;
+}
+
 @mixin topbar-spacing() {
     margin-top: 7em;
 }

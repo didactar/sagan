@@ -1,6 +1,6 @@
 @import '../mixins.scss';
 
 .home {
-    @include main-column(); 
+    @include main-column-wide(); 
     @include topbar-spacing(); 
 }

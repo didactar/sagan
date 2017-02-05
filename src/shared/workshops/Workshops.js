@@ -3,12 +3,16 @@ import Loading from '../loading/Loading'
 
 
 const Workshop = ({workshop}) =>
-    <a 
-        href={'workshop/' + workshop.slug }
-        className='workshop-item'
-    >
-        {workshop.name}
-    </a>
+    <div className='workshop-item'>
+        <a 
+            href={'workshop/' + workshop.slug }
+            className='workshop-item-link'
+        >
+            <span className='workshop-item-name'>
+                {workshop.name}
+            </span>
+        </a>
+    </div>
 
 
 const Workshops = ({workshops}) =>
@@ -19,16 +23,16 @@ const Workshops = ({workshops}) =>
     </div>
 
 
-const ListWrapper = ({workshops, fetching}) =>
-    workshops.length === 0
-        ? (fetching ? <Loading /> : <h2>Empty.</h2>)
+const WorkshopsWrapper = ({workshops, fetching}) =>
+    fetching 
+        ? <Loading />
         : <Workshops workshops={workshops} />
 
 
-ListWrapper.propTypes = {
+WorkshopsWrapper.propTypes = {
     workshops: PropTypes.array.isRequired,
     fetching: PropTypes.bool.isRequired
 }
 
 
-export default ListWrapper
+export default WorkshopsWrapper
