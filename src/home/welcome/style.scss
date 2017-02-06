@@ -1,0 +1,52 @@
+.welcome {
+    text-align: center;
+    height: 33em;    
+    background-size: cover;
+    background-position: 50% 50%;
+    background-attachment: fixed;
+    background: #666;
+    position: relative;
+}
+
+.welcome-degrade {
+    background: -moz-linear-gradient(top, transparent, rgba(3,3,3,0.6));
+    position: absolute;
+    bottom: 0;
+    height: 15em;
+    width: 100%;
+}
+
+.welcome-content {
+    @include main-column(); 
+    position: relative;
+    height: 100%;
+}
+
+.welcome-learn {
+    position: absolute;
+    bottom: 3em;
+}
+
+.welcome-learn-message {
+    color: #fff;
+    font-size: 1.5em;
+    width: 100%;
+    text-align: center;
+}
+
+.welcome-learn-link {
+    display: inline-block;
+    margin: 3em auto 0;
+    border-radius: 10em;
+    color: #fff;
+    font-size: 1.2em;
+    border: 2px solid #fff;    
+    padding: 0.5em 1.5em;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.welcome-learn-link:hover {
+    color: #555;
+    background: #fff;
+}

@@ -4,8 +4,6 @@
     width: 90%;
     max-width: 850px;
     padding: 0 1em;
-    position: relative;
-    overflow: hidden;
 }
 
 @mixin main-column-wide() {
@@ -13,8 +11,6 @@
     margin-right: auto;
     width: 90%;
     padding: 0 1em;
-    position: relative;
-    overflow: hidden;
 }
 
 @mixin topbar-spacing() {
