@@ -1,4 +1,8 @@
 @import '../mixins.scss';
+@import './footer/style.scss';
+@import './login/style.scss';
+@import './settings/style.scss';
+
 
 .profile {
     @include main-column(); 
