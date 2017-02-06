@@ -5,13 +5,17 @@ import Body from './body/Body'
 import Loading from '../shared/loading/Loading'
 
 
-const Workshop = ({workshop, content, showGuide, showCalendar, showEvent}) =>
+const Workshop = ({
+    workshop, content, showGuide, 
+    showCalendar, showEvent, showCommunity
+}) =>
     <div>
         <Header 
             workshop={workshop} 
             content={content} 
             showGuide={showGuide} 
             showCalendar={showCalendar} 
+            showCommunity={showCommunity} 
         />
         <Body 
             workshop={workshop} 
@@ -22,7 +26,10 @@ const Workshop = ({workshop, content, showGuide, showCalendar, showEvent}) =>
 
 
 
-const WorkshopWrapper = ({workshop, fetching, content, showGuide, showCalendar, showEvent}) =>
+const WorkshopWrapper = ({
+    workshop, fetching, content, 
+    showGuide, showCalendar, showEvent, showCommunity
+}) =>
     <div>
         <Topbar color='dark' />
         {fetching
@@ -33,6 +40,7 @@ const WorkshopWrapper = ({workshop, fetching, content, showGuide, showCalendar, 
                     showGuide={showGuide}
                     showCalendar={showCalendar}
                     showEvent={showEvent}
+                    showCommunity={showCommunity}
               />
         }
     </div>
@@ -43,7 +51,8 @@ WorkshopWrapper.propTypes = {
     fetching: PropTypes.bool.isRequired,
     showGuide: PropTypes.func.isRequired,
     showCalendar: PropTypes.func.isRequired,
-    showEvent: PropTypes.func.isRequired
+    showEvent: PropTypes.func.isRequired,
+    showCommunity: PropTypes.func.isRequired,
 }
 
 

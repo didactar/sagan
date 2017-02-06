@@ -9,13 +9,12 @@ const Button = ({content, icon, onClick}) =>
     </i>
 
 
-const Navbar = ({workshop, content, showGuide, showCalendar}) =>
+const Navbar = ({workshop, content, showGuide, showCalendar, showCommunity}) =>
     <div className='workshop-navbar'>
         <div className='workshop-navbar-content'>
             <Button content={content} icon='fa-map-signs' onClick={showGuide} />
             <Button content={content} icon='fa-calendar-o' onClick={showCalendar} />
-            <Button content={content} icon='fa-group' />
-            <Button content={content} icon='fa-bell' />
+            <Button content={content} icon='fa-group' onClick={showCommunity} />
             <Button content={content} icon='fa-heart-o' />
         </div>
     </div>
@@ -27,7 +26,7 @@ const Title = ({workshop}) =>
     </div>
 
 
-const Header = ({workshop, content, showGuide, showCalendar}) =>
+const Header = ({workshop, content, showGuide, showCalendar, showCommunity}) =>
     <div className='workshop-header'>
         <div className='workshop-header-degrade'>
             <Title workshop={workshop} />
@@ -36,6 +35,7 @@ const Header = ({workshop, content, showGuide, showCalendar}) =>
                 content={content}
                 showGuide={showGuide}
                 showCalendar={showCalendar} 
+                showCommunity={showCommunity} 
             />
         </div>
     </div>
@@ -45,6 +45,7 @@ Header.propTypes = {
     workshop: PropTypes.object.isRequired,
     content: PropTypes.string.isRequired,
     showCalendar: PropTypes.func.isRequired,
+    showCommunity: PropTypes.func.isRequired,
     showGuide: PropTypes.func.isRequired
 }
 
