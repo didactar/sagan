@@ -27,7 +27,10 @@ const Title = ({workshop}) =>
 
 
 const Header = ({workshop, content, showGuide, showCalendar, showCommunity}) =>
-    <div className='workshop-header'>
+    <div 
+        className='workshop-header'
+        style={{'backgroundImage': 'url(/images/' + workshop.image + '.jpg)'}}
+    >
         <div className='workshop-header-degrade'>
             <Title workshop={workshop} />
             <Navbar 

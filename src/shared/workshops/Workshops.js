@@ -3,7 +3,10 @@ import Loading from '../loading/Loading'
 
 
 const Workshop = ({workshop}) =>
-    <div className='workshop-item'>
+    <div
+        className='workshop-item'
+        style={{'backgroundImage': 'url(/images/' + workshop.image + '.jpg)'}}
+    >
         <a 
             href={'workshop/' + workshop.slug }
             className='workshop-item-link'

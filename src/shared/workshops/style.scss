@@ -5,13 +5,15 @@
 }
 
 .workshop-item {
-    background: #eee;
     text-align: center;
     cursor: pointer;
     height: 20em;
     width: 20em;
     margin: 0.5em;
+    background-size: cover;
+    background-position: 50% 50%;
 }
+
 
 .workshop-item-link {
     display: block;

@@ -2,19 +2,20 @@
 
 .workshop-header {
     margin: 0 0 2em;
-    height: 30em;    
+    height: 25em;    
     position: relative;
-    background: #aaa;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-attachment: fixed;
 }
 
 .workshop-header-degrade {
-    background: -moz-linear-gradient(top, transparent, rgba(3,3,3,0.3));
+    background: -moz-linear-gradient(top, transparent, rgba(3,3,3,0.6));
     position: absolute;
     bottom: 0;
-    height: 8em;
+    height: 15em;
     width: 100%;
 }
-
 
 .workshop-header-image-title {
     position: absolute;
