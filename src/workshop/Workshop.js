@@ -10,6 +10,7 @@ const Workshop = ({
     showCalendar, showEvent, showCommunity
 }) =>
     <div>
+        <Topbar color='dark' />
         <Header 
             workshop={workshop} 
             content={content} 
@@ -30,20 +31,16 @@ const WorkshopWrapper = ({
     workshop, fetching, content, 
     showGuide, showCalendar, showEvent, showCommunity
 }) =>
-    <div>
-        <Topbar color='dark' />
-        {fetching
-            ? <Loading />
-            : <Workshop 
-                    workshop={workshop} 
-                    content={content}
-                    showGuide={showGuide}
-                    showCalendar={showCalendar}
-                    showEvent={showEvent}
-                    showCommunity={showCommunity}
-              />
-        }
-    </div>
+    fetching
+        ? <Loading />
+        : <Workshop 
+                workshop={workshop} 
+                content={content}
+                showGuide={showGuide}
+                showCalendar={showCalendar}
+                showEvent={showEvent}
+                showCommunity={showCommunity}
+          />
 
 
 WorkshopWrapper.propTypes = {

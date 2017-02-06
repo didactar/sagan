@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react'
-import Loading from '../../../shared/loading/Loading'
+import Spinner from '../../../shared/loading/Spinner'
 
 
 const Event = ({event, showEvent}) =>
@@ -19,7 +19,7 @@ const Calendar = ({events, showEvent}) =>
 const CalendarWrapper = ({events, fetching, showEvent}) =>
     <div>
         {fetching
-            ? <Loading />
+            ? <Spinner />
             : <Calendar events={events} showEvent={showEvent} />}
     </div>
 

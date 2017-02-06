@@ -1,6 +1,10 @@
 import React from 'react'
+import Topbar from '../topbar/container'
+import Spinner from './Spinner'
+
 
 export default () =>
-    <div className='loading'>
-        <i className='fa fa-spin fa-spinner'></i>
+    <div>
+        <Topbar />
+        <Spinner />
     </div>

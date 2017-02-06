@@ -1,5 +1,5 @@
 import React, {PropTypes} from 'react'
-import Loading from '../loading/Loading'
+import Spinner from '../loading/Spinner'
 
 
 const Workshop = ({workshop}) =>
@@ -28,7 +28,7 @@ const Workshops = ({workshops}) =>
 
 const WorkshopsWrapper = ({workshops, fetching}) =>
     fetching 
-        ? <Loading />
+        ? <Spinner />
         : <Workshops workshops={workshops} />
 
 
