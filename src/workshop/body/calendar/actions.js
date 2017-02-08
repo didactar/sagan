@@ -1,27 +1,7 @@
-import {BASE_URL} from '../../../constants'
-
-export const REQUEST_EVENTS = 'REQUEST_EVENTS'
-export const RECEIVE_EVENTS = 'RECEIVE_EVENTS'
+export const SHOW_EVENT_DETAIL = 'SHOW_EVENT_DETAIL'
 
 
-const workshopEvents = (workshop) =>
-    BASE_URL + 'workshops/' + workshop + '/events'
-
-
-export const requestEvents = () => ({
-    type: REQUEST_EVENTS
+export const showEventDetail = selectedEvent => ({
+    type: SHOW_EVENT_DETAIL,
+    selectedEvent
 })
-
-
-export const receiveEvents = json => ({
-    type: RECEIVE_EVENTS,
-    items: json.data
-})
-
-
-export const fetchEvents = workshop => dispatch => {
-    dispatch(requestEvents())
-    return fetch(workshopEvents(workshop))
-        .then(response => response.json())
-        .then(json => dispatch(receiveEvents(json)))
-}

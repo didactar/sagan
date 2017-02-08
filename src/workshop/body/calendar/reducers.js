@@ -1,27 +1,32 @@
-import { REQUEST_EVENTS, RECEIVE_EVENTS } from './actions'
+import { combineReducers } from 'redux'
+import eventList from './eventList/reducers'
+import { SHOW_EVENT_DETAIL } from './actions'
+import { SHOW_CALENDAR } from '../../actions'
 
 
 const defaultState = {
-    fetching: true, 
-    events: []
+    calendarTab: 'eventList',
+    selectedEvent: {}
 }
 
 
-export default (state = defaultState, action) => {
+const calendarTab = (state = defaultState, action) => {
 
   switch (action.type) {
 
-    case REQUEST_EVENTS:
+    case SHOW_CALENDAR:
       return {
         ...state,
-        fetching: true
+        calendarTab: 'eventList',
+        selectedEvent: action.selectedEvent
       }
 
-    case RECEIVE_EVENTS:
+
+    case SHOW_EVENT_DETAIL:
       return {
         ...state,
-        fetching: false,
-        events: action.items
+        calendarTab: 'eventDetail',
+        selectedEvent: action.selectedEvent
       }
 
     default:
@@ -30,3 +35,8 @@ export default (state = defaultState, action) => {
   }
 
 }
+
+
+export default combineReducers({
+    calendarTab, eventList
+})

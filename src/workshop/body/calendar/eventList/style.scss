@@ -1,0 +1,9 @@
+.calendar-event {
+    border-bottom: 1px solid #ccc;
+    cursor: pointer;
+    padding: 1em;
+}
+
+.calendar-event:hover {
+    background: #eee;
+}

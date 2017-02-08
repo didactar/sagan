@@ -13,8 +13,7 @@ class WorkshopContainer extends Component {
         activeTab: PropTypes.string.isRequired,
         showGuide: PropTypes.func.isRequired,
         showCalendar: PropTypes.func.isRequired,
-        showEvent: PropTypes.func.isRequired,
-        showCommunity: PropTypes.func.isRequired,
+        showCommunity: PropTypes.func.isRequired
     }
 
 

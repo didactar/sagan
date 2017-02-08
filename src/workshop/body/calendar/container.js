@@ -7,13 +7,10 @@ import Calendar from './Calendar'
 class CalendarContainer extends Component {
 
     static propTypes = {
-        events: PropTypes.array.isRequired,
+        calendarTab: PropTypes.string.isRequired,
         workshop: PropTypes.object.isRequired,
-        fetching: PropTypes.bool.isRequired
+        selectedEvent: PropTypes.object.isRequired
     }
-
-    componentDidMount = () =>
-        this.props.fetchEvents(this.props.workshop.slug)
 
     render = () =>
         <Calendar {...this.props} />
@@ -21,4 +18,7 @@ class CalendarContainer extends Component {
 }
 
 
-export default connect(state => state.workshop.calendar, actions)(CalendarContainer)
+export default connect(
+    state => state.workshop.calendar.calendarTab, 
+    actions
+)(CalendarContainer)

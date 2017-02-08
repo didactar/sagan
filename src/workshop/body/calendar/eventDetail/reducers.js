@@ -1,4 +1,4 @@
-import { REQUEST_WORKSHOP, RECEIVE_WORKSHOP } from './actions'
+import { REQUEST_EVENT, RECEIVE_EVENT } from './actions'
 
 
 const defaultState = {
@@ -11,13 +11,13 @@ export default (state = defaultState, action) => {
 
   switch (action.type) {
 
-    case REQUEST_WORKSHOP:
+    case REQUEST_EVENT:
       return {
         ...state,
         fetching: true,
       }
 
-    case RECEIVE_WORKSHOP:
+    case RECEIVE_EVENT:
       return {
         ...state,
         fetching: false,

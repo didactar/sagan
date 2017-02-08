@@ -1,14 +1,14 @@
 import React, { PropTypes } from 'react'
 
 
-const Guide = ({description}) =>
+const Guide = props =>
     <div>
-        <h3>{description}</h3>
+        <h3>{props.workshop.description}</h3>
     </div>
 
 
 Guide.propTypes = {
-    description: PropTypes.string.isRequired
+    workshop: PropTypes.object.isRequired
 }
 
 

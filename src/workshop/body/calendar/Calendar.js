@@ -1,34 +1,25 @@
 import React, { PropTypes } from 'react'
-import Spinner from '../../../shared/loading/Spinner'
+import EventList from './eventList/container'
+import EventDetail from './eventDetail/container'
 
 
-const Event = ({event, showEvent}) =>
-    <div className='calendar-event' onClick={showEvent}>
-        <p>{event.title}</p>
-    </div>
+const Calendar = props =>
+    props.calendarTab === 'eventList'
+        ? <EventList 
+                showEventDetail={props.showEventDetail} 
+                workshop={props.workshop}
+        />
+        : <EventDetail 
+                selectedEvent={props.selectedEvent}
+        />
 
 
-const Calendar = ({events, showEvent}) =>
-    <div className='main-column'>
-        {events.map((event, i) =>
-            <Event key={i} event={event} showEvent={showEvent} />
-        )}
-    </div>
-
-
-const CalendarWrapper = ({events, fetching, showEvent}) =>
-    <div>
-        {fetching
-            ? <Spinner />
-            : <Calendar events={events} showEvent={showEvent} />}
-    </div>
-
-
-CalendarWrapper.propTypes = {
-    events: PropTypes.array.isRequired,
-    fetching: PropTypes.bool.isRequired,
-    showEvent: PropTypes.func.isRequired
+Calendar.propTypes = {
+    calendarTab: PropTypes.string.isRequired,
+    showEventDetail: PropTypes.func.isRequired,
+    workshop: PropTypes.object.isRequired,
+    selectedEvent: PropTypes.object
 }
 
 
-export default CalendarWrapper
+export default Calendar
