@@ -5,8 +5,8 @@ import Guide from './guide/Guide'
 import Community from './community/Community'
 
 
-const BodyContent = ({workshop, content, showEvent}) => {
-    switch (content) {
+const Tab = ({workshop, activeTab, showEvent}) => {
+    switch (activeTab) {
         case 'guide':
             return <Guide description={workshop.description}/>
         case 'calendar':
@@ -21,11 +21,7 @@ const BodyContent = ({workshop, content, showEvent}) => {
 }
 
 
-export default ({workshop, content, showEvent}) =>
+export default props =>
     <div className='workshop-body'> 
-        <BodyContent 
-            workshop={workshop} 
-            content={content} 
-            showEvent={showEvent} 
-        />
+        <Tab {...props} />
     </div>

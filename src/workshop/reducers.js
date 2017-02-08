@@ -7,7 +7,7 @@ import { REQUEST_WORKSHOP, RECEIVE_WORKSHOP } from './actions'
 
 
 const defaultState = {
-    content: 'guide',
+    activeTab: 'guide',
     fetching: true, 
     workshop: {}
 }
@@ -33,25 +33,25 @@ const workshop = (state = defaultState, action) => {
     case SHOW_CALENDAR:
       return {
         ...state,
-        content: 'calendar'
+        activeTab: 'calendar'
       }
 
     case SHOW_EVENT:
       return {
         ...state,
-        content: 'event'
+        activeTab: 'event'
       }
 
     case SHOW_GUIDE:
       return {
         ...state,
-        content: 'guide'
+        activeTab: 'guide'
       }
 
     case SHOW_COMMUNITY:
       return {
         ...state,
-        content: 'community'
+        activeTab: 'community'
       }
 
     default:

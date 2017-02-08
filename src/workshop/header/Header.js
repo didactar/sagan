@@ -1,52 +1,68 @@
 import React, { PropTypes } from 'react'
 
 
-const Button = ({content, icon, onClick}) =>
+const TabButton = ({activeTab, tab, icon, onClick}) =>
     <i 
-        className={'workshop-navbar-icon fa ' + icon}
-        onClick={e => onClick()}
-    >
-    </i>
+        onClick={onClick} 
+        className={
+            activeTab === tab 
+                ? 'workshop-navbar-icon-active fa ' + icon
+                : 'workshop-navbar-icon fa ' + icon 
+        }
+    ></i>
 
 
-const Navbar = ({workshop, content, showGuide, showCalendar, showCommunity}) =>
+const Navbar = props =>
     <div className='workshop-navbar'>
-        <div className='workshop-navbar-content'>
-            <Button content={content} icon='fa-map-signs' onClick={showGuide} />
-            <Button content={content} icon='fa-calendar-o' onClick={showCalendar} />
-            <Button content={content} icon='fa-group' onClick={showCommunity} />
-            <Button content={content} icon='fa-heart-o' />
+        <div className='workshop-navbar-tab'>
+            <TabButton 
+                tab='guide'
+                activeTab={props.activeTab} 
+                icon='fa-map-signs' 
+                onClick={props.showGuide} 
+            />
+            <TabButton 
+                tab='calendar'
+                activeTab={props.activeTab} 
+                icon='fa-calendar-o' 
+                onClick={props.showCalendar} 
+            />
+            <TabButton 
+                tab='community'
+                activeTab={props.activeTab} 
+                icon='fa-group' 
+                onClick={props.showCommunity} 
+            />
+            <TabButton 
+                tab='like'
+                activeTab={props.activeTab} 
+                icon='fa-heart-o' 
+            />
         </div>
     </div>
 
 
-const Title = ({workshop}) =>
+const WorkshopName = ({name}) =>
     <div className='workshop-header-image-title'>
-        {workshop.name}
+        {name}
     </div>
 
 
-const Header = ({workshop, content, showGuide, showCalendar, showCommunity}) =>
+const Header = props =>
     <div 
         className='workshop-header'
-        style={{'backgroundImage': 'url(/images/' + workshop.image + '.jpg)'}}
+        style={{'backgroundImage': 'url(/images/' + props.workshop.image + '.jpg)'}}
     >
         <div className='workshop-header-degrade'>
-            <Title workshop={workshop} />
-            <Navbar 
-                workshop={workshop}
-                content={content}
-                showGuide={showGuide}
-                showCalendar={showCalendar} 
-                showCommunity={showCommunity} 
-            />
+            <WorkshopName name={props.workshop.name} />
+            <Navbar {...props} />
         </div>
     </div>
 
 
 Header.propTypes = {
     workshop: PropTypes.object.isRequired,
-    content: PropTypes.string.isRequired,
+    activeTab: PropTypes.string.isRequired,
     showCalendar: PropTypes.func.isRequired,
     showCommunity: PropTypes.func.isRequired,
     showGuide: PropTypes.func.isRequired

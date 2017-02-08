@@ -2,50 +2,28 @@ import React, { PropTypes } from 'react'
 import Topbar from '../shared/topbar/container'
 import Header from './header/Header'
 import Body from './body/Body'
-import Loading from '../shared/loading/Loading'
 
-
-const Workshop = ({
-    workshop, content, showGuide, 
-    showCalendar, showEvent, showCommunity
-}) =>
+     
+const Workshop = props =>
     <div>
         <Topbar color='dark' />
         <Header 
-            workshop={workshop} 
-            content={content} 
-            showGuide={showGuide} 
-            showCalendar={showCalendar} 
-            showCommunity={showCommunity} 
+            workshop={props.workshop} 
+            activeTab={props.activeTab} 
+            showGuide={props.showGuide} 
+            showCalendar={props.showCalendar} 
+            showCommunity={props.showCommunity} 
         />
         <Body 
-            workshop={workshop} 
-            content={content} 
-            showEvent={showEvent} 
+            workshop={props.workshop}
+            showEvent={props.showEvent}
+            activeTab={props.activeTab}
         />
     </div>
 
 
-
-const WorkshopWrapper = ({
-    workshop, fetching, content, 
-    showGuide, showCalendar, showEvent, showCommunity
-}) =>
-    fetching
-        ? <Loading />
-        : <Workshop 
-                workshop={workshop} 
-                content={content}
-                showGuide={showGuide}
-                showCalendar={showCalendar}
-                showEvent={showEvent}
-                showCommunity={showCommunity}
-          />
-
-
-WorkshopWrapper.propTypes = {
+Workshop.propTypes = {
     workshop: PropTypes.object.isRequired,
-    fetching: PropTypes.bool.isRequired,
     showGuide: PropTypes.func.isRequired,
     showCalendar: PropTypes.func.isRequired,
     showEvent: PropTypes.func.isRequired,
@@ -53,4 +31,4 @@ WorkshopWrapper.propTypes = {
 }
 
 
-export default WorkshopWrapper
+export default Workshop
