@@ -11,14 +11,9 @@ class EventContainer extends Component {
     }
 
     render = () =>
-        <Event 
-            event={this.props.event} 
-            fetching={this.props.fetching} 
-        />
+        <Event {...this.props} />  
 
 }
 
 
-export default connect(
-    state => state.workshop.event
-)(EventContainer)
+export default connect(state => state.workshop.event)(EventContainer)

@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react'
 import { connect } from 'react-redux'
-import { fetchEvents } from './actions'
+import * as actions from './actions'
 import Calendar from './Calendar'
 
 
@@ -16,16 +16,9 @@ class CalendarContainer extends Component {
         this.props.fetchEvents(this.props.workshop.slug)
 
     render = () =>
-        <Calendar 
-            events={this.props.events}
-            fetching={this.props.fetching}
-            showEvent={this.props.showEvent}
-        />
+        <Calendar {...this.props} />
 
 }
 
 
-export default connect(
-    state => state.workshop.calendar,
-    { fetchEvents }
-)(CalendarContainer)
+export default connect(state => state.workshop.calendar, actions)(CalendarContainer)

@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react'
 import { connect } from 'react-redux'
-import { fetchWorkshopsIfNeeded } from './actions'
+import * as actions from './actions'
 import Home from './Home'
 
 
@@ -23,7 +23,4 @@ class HomeContainer extends Component {
 }
 
 
-export default connect(
-    state => state.home,
-    { fetchWorkshopsIfNeeded }
-)(HomeContainer)
+export default connect(state => state.home, actions)(HomeContainer)

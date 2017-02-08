@@ -11,14 +11,9 @@ class CommunityContainer extends Component {
     }
 
     render = () =>
-        <Community 
-            community={this.props.community} 
-            fetching={this.props.fetching} 
-        />
+        <Community {...this.props} />
 
 }
 
 
-export default connect(
-    state => state.workshop.community
-)(CommunityContainer)
+export default connect(state => state.workshop.community)(CommunityContainer)

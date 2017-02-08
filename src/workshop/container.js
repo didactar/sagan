@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react'
 import { connect } from 'react-redux'
 import { fetchWorkshop } from './actions'
-import { showGuide, showCalendar, showEvent, showCommunity } from './actions'
+import * as actions from './actions'
 import Workshop from './Workshop'
 
 
@@ -17,20 +17,9 @@ class WorkshopContainer extends Component {
         this.props.fetchWorkshop(this.props.params.workshop)
 
     render = () =>
-        <Workshop 
-            workshop={this.props.workshop} 
-            fetching={this.props.fetching} 
-            content={this.props.content} 
-            showGuide={this.props.showGuide}
-            showCalendar={this.props.showCalendar}
-            showEvent={this.props.showEvent}
-            showCommunity={this.props.showCommunity}
-        />
+        <Workshop {...this.props} />
 
 }
 
 
-export default connect(
-    state => state.workshop.workshop, 
-    {fetchWorkshop, showGuide, showCalendar, showEvent, showCommunity}
-)(WorkshopContainer)
+export default connect(state => state.workshop.workshop, actions)(WorkshopContainer)
