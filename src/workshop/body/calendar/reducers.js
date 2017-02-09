@@ -1,12 +1,13 @@
 import { combineReducers } from 'redux'
 import eventList from './eventList/reducers'
+import eventDetail from './eventDetail/reducers'
 import { SHOW_EVENT_DETAIL } from './actions'
 import { SHOW_CALENDAR } from '../../actions'
 
 
 const defaultState = {
     calendarTab: 'eventList',
-    selectedEvent: {}
+    selectedEvent: ''
 }
 
 
@@ -20,7 +21,6 @@ const calendarTab = (state = defaultState, action) => {
         calendarTab: 'eventList',
         selectedEvent: action.selectedEvent
       }
-
 
     case SHOW_EVENT_DETAIL:
       return {
@@ -38,5 +38,5 @@ const calendarTab = (state = defaultState, action) => {
 
 
 export default combineReducers({
-    calendarTab, eventList
+    calendarTab, eventList, eventDetail
 })

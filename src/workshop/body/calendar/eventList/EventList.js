@@ -1,42 +1,31 @@
 import React, { PropTypes } from 'react'
-import Spinner from '../../../../shared/loading/Spinner'
 
 
-const EventItem = props =>
+const EventItem = ({eventItem, showEventDetail}) =>
     <div 
         className='calendar-event' 
-        onClick={e => props.showEventDetail({})}
+        onClick={e => showEventDetail(eventItem.slug)}
     >
-        <p>{props.eventItem.title}</p>
+        <p>{eventItem.title}</p>
     </div>
 
 
-const EventList = props =>
+const EventList = ({events, showEventDetail}) =>
     <div className='workshop-event-list'>
-        {props.events.map((eventItem, i) =>
+        {events.map((eventItem, i) =>
             <EventItem 
                 key={i} 
                 eventItem={eventItem} 
-                showEventDetail={props.showEventDetail} 
+                showEventDetail={showEventDetail} 
             />
         )}
     </div>
 
 
-const EventListWrapper = props =>
-    props.fetching
-        ? <Spinner />
-        : <EventList 
-                events={props.events} 
-                showEventDetail={props.showEventDetail} 
-          />
-
-
-EventListWrapper.propTypes = {
+EventList.propTypes = {
     events: PropTypes.array.isRequired,
-    fetching: PropTypes.bool.isRequired,
     showEventDetail: PropTypes.func.isRequired
 }
 
 
-export default EventListWrapper
+export default EventList

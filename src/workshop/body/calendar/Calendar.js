@@ -6,11 +6,11 @@ import EventDetail from './eventDetail/container'
 const Calendar = props =>
     props.calendarTab === 'eventList'
         ? <EventList 
-                showEventDetail={props.showEventDetail} 
-                workshop={props.workshop}
+            showEventDetail={props.showEventDetail} 
+            workshop={props.workshop}
         />
         : <EventDetail 
-                selectedEvent={props.selectedEvent}
+            eventSlug={props.selectedEvent}
         />
 
 
@@ -18,7 +18,7 @@ Calendar.propTypes = {
     calendarTab: PropTypes.string.isRequired,
     showEventDetail: PropTypes.func.isRequired,
     workshop: PropTypes.object.isRequired,
-    selectedEvent: PropTypes.object
+    selectedEvent: PropTypes.string
 }
 
 

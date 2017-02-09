@@ -8,8 +8,7 @@ class CalendarContainer extends Component {
 
     static propTypes = {
         calendarTab: PropTypes.string.isRequired,
-        workshop: PropTypes.object.isRequired,
-        selectedEvent: PropTypes.object.isRequired
+        workshop: PropTypes.object.isRequired
     }
 
     render = () =>

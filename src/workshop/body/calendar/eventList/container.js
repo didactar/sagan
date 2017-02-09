@@ -2,6 +2,7 @@ import React, { Component, PropTypes } from 'react'
 import { connect } from 'react-redux'
 import * as actions from './actions'
 import EventList from './EventList'
+import Spinner from '../../../../shared/loading/Spinner'
 
 
 class EventListContainer extends Component {
@@ -16,7 +17,9 @@ class EventListContainer extends Component {
         this.props.fetchEvents(this.props.workshop.slug)
 
     render = () =>
-        <EventList {...this.props} />
+        this.props.fetching
+            ? <Spinner />
+            : <EventList {...this.props} />
 
 }
 

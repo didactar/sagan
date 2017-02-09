@@ -1,7 +1,15 @@
-import React from 'react'
+import React, { PropTypes } from 'react'
 
 
-export default () =>
+const EventDetail = ({event}) =>
     <div className='workshop-event-detail'>
-        Event detail
+        {event.title}
     </div>
+
+
+EventDetail.propTypes = {
+    event: PropTypes.object.isRequired
+}
+
+
+export default EventDetail
