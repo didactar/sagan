@@ -53,11 +53,13 @@ const Navbar = props =>
 
 const Title = ({name}) =>
     <div className='workshop-header-title'>
-        <div className='workshop-header-title-name'>
-            {name}
+        <div className='workshop-header-title-content'>
+            <div className='workshop-header-title-name'>
+                {name}
+            </div>
+            <i className={'workshop-header-title-bookmark fa fa-heart-o'} >
+            </i>
         </div>
-        <i className={'workshop-header-title-bookmark fa fa-heart-o'} >
-        </i>
     </div>
 
 
