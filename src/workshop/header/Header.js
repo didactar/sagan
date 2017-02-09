@@ -50,22 +50,20 @@ const Navbar = props =>
     </div>
 
 
-const Bookmark = () =>
-    <div className='workshop-header-bookmark'>
-        Bookmark
-    </div>
 
-
-const WorkshopName = ({name}) =>
-    <div className='workshop-header-image-title'>
-        {name}
+const Title = ({name}) =>
+    <div className='workshop-header-title'>
+        <div className='workshop-header-title-name'>
+            {name}
+        </div>
+        <i className={'workshop-header-title-bookmark fa fa-heart-o'} >
+        </i>
     </div>
 
 
 const HeaderContent = props =>
     <div className='workshop-header-content'>
-        <WorkshopName name={props.workshop.name} />
-        <Bookmark workshop={props.workshop} />
+        <Title name={props.workshop.name} />
         <Navbar {...props} />
     </div>
 
@@ -75,7 +73,9 @@ const Header = props =>
         className='workshop-header'
         style={{'backgroundImage': 'url(/images/' + props.workshop.image + '.jpg)'}}
     >
-        <HeaderContent {...props} />
+        <div className='workshop-header-degrade'>
+            <HeaderContent {...props} />
+        </div>
     </div>
 
 
