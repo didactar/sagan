@@ -2,19 +2,30 @@
     @include main-column(); 
     position: absolute;
     bottom: 0;
-    text-align: center;
     border-top: 1px solid #ccc;
     padding: 0.5em 0;
+    text-align: center;
 }
 
-.profile-footer-link {
+.profile-footer-button {
     text-decoration: none;
-    font-size: 1.3em;
-    color: #555;
-    padding: 0.8em 1.7em;
+    color: #777;
+    padding: 1em 2.5em;
     display: inline-block;
+    cursor: pointer;
 }
 
-.profile-footer-link:hover {
-    color: #222;
+.profile-footer-button:hover {
+    color: #000;
+}
+
+.profile-footer-button-label {
+    text-transform: capitalize;
+    font-size: 1.2em;
+}
+
+.profile-footer-button-icon {
+    display: inline-block;
+    font-size: 1.4em;
+    margin: 0 0.5em 0 0;
 }

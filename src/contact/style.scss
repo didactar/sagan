@@ -1,0 +1,6 @@
+@import '../mixins.scss';
+
+.contact {
+    @include main-column(); 
+    @include topbar-spacing(); 
+}
