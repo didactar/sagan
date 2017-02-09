@@ -7,13 +7,7 @@ import Body from './body/Body'
 const Workshop = props =>
     <div>
         <Topbar color='dark' />
-        <Header 
-            workshop={props.workshop} 
-            activeTab={props.activeTab} 
-            showGuide={props.showGuide} 
-            showCalendar={props.showCalendar} 
-            showCommunity={props.showCommunity} 
-        />
+        <Header {...props} />
         <Body 
             workshop={props.workshop}
             activeTab={props.activeTab}
@@ -23,9 +17,11 @@ const Workshop = props =>
 
 Workshop.propTypes = {
     workshop: PropTypes.object.isRequired,
+    activeTab: PropTypes.string.isRequired,
     showGuide: PropTypes.func.isRequired,
     showCalendar: PropTypes.func.isRequired,
     showCommunity: PropTypes.func.isRequired,
+    showRelated: PropTypes.func.isRequired,
 }
 
 

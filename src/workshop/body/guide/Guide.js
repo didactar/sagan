@@ -2,7 +2,7 @@ import React, { PropTypes } from 'react'
 
 
 const Guide = props =>
-    <div>
+    <div className='workshop-guide'>
         <h3>{props.workshop.description}</h3>
     </div>
 

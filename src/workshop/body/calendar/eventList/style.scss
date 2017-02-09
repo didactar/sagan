@@ -1,3 +1,10 @@
+@import '../../../../mixins.scss';
+
+.workshop-event-list {
+    @include main-column(); 
+    margin-top: 2em;
+}
+
 .calendar-event {
     border-bottom: 1px solid #ccc;
     cursor: pointer;

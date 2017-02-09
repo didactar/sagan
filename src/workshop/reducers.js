@@ -1,7 +1,8 @@
 import { combineReducers } from 'redux'
 import calendar from './body/calendar/reducers'
+import related from './body/related/reducers'
 
-import { SHOW_GUIDE, SHOW_CALENDAR, SHOW_COMMUNITY } from './actions'
+import { SHOW_GUIDE, SHOW_CALENDAR, SHOW_COMMUNITY, SHOW_RELATED } from './actions'
 import { REQUEST_WORKSHOP, RECEIVE_WORKSHOP } from './actions'
 
 
@@ -47,6 +48,12 @@ const workshop = (state = defaultState, action) => {
         activeTab: 'community'
       }
 
+    case SHOW_RELATED:
+      return {
+        ...state,
+        activeTab: 'related'
+      }
+
     default:
       return state
 
@@ -56,5 +63,5 @@ const workshop = (state = defaultState, action) => {
 
 
 export default combineReducers({
-    workshop, calendar
+    workshop, calendar, related
 })

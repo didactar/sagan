@@ -2,6 +2,6 @@ import React from 'react'
 
 
 export default () =>
-    <div>
+    <div className='workshop-community'>
         Community 
     </div>

@@ -2,6 +2,6 @@ import React from 'react'
 
 
 export default () =>
-    <div className='main-column'>
+    <div className='workshop-event-detail'>
         Event detail
     </div>

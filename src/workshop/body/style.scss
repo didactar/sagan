@@ -1,6 +1,4 @@
 @import './calendar/style.scss';
-@import '../../mixins.scss';
-
-.workshop-body {
-    @include main-column(); 
-}
+@import './related/style.scss';
+@import './guide/style.scss';
+@import './community/style.scss';

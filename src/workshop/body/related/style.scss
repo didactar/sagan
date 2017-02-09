@@ -1,0 +1,6 @@
+@import '../../../mixins.scss';
+
+.workshop-related {
+    @include main-column-wide(); 
+    margin-top: 0.5em;
+}

@@ -43,6 +43,7 @@ const Navbar = props =>
                 tab='related'
                 activeTab={props.activeTab} 
                 icon='fa-hashtag' 
+                onClick={props.showRelated} 
                 label='related'
             />
         </div>
@@ -83,7 +84,8 @@ Header.propTypes = {
     activeTab: PropTypes.string.isRequired,
     showCalendar: PropTypes.func.isRequired,
     showCommunity: PropTypes.func.isRequired,
-    showGuide: PropTypes.func.isRequired
+    showGuide: PropTypes.func.isRequired,
+    showRelated: PropTypes.func.isRequired,
 }
 
 

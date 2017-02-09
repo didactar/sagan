@@ -12,7 +12,7 @@ const EventItem = props =>
 
 
 const EventList = props =>
-    <div className='main-column'>
+    <div className='workshop-event-list'>
         {props.events.map((eventItem, i) =>
             <EventItem 
                 key={i} 

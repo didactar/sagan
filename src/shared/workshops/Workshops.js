@@ -8,7 +8,7 @@ const Workshop = ({workshop}) =>
         style={{'backgroundImage': 'url(/images/' + workshop.image + '.jpg)'}}
     >
         <a 
-            href={'workshop/' + workshop.slug }
+            href={'/workshop/' + workshop.slug }
             className='workshop-item-link'
         >
             <span className='workshop-item-name'>
