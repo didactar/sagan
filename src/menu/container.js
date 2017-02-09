@@ -1,10 +1,10 @@
 import React, { Component, PropTypes } from 'react'
 import { connect } from 'react-redux'
 import * as actions from './actions'
-import Profile from './Profile'
+import Menu from './Menu'
 
 
-class ProfileContainer extends Component {
+class MenuContainer extends Component {
 
     static propTypes = {
         loggedIn: PropTypes.bool.isRequired,
@@ -14,12 +14,12 @@ class ProfileContainer extends Component {
     }
 
     render = () => 
-        <Profile {...this.props} />
+        <Menu {...this.props} />
 
 }
 
 
 export default connect(
-    state => state.profile, 
+    state => state.menu, 
     actions
-)(ProfileContainer)
+)(MenuContainer)

@@ -1,10 +1,10 @@
 @import '../mixins.scss';
-@import './user/style.scss';
+@import './profile/style.scss';
 @import './settings/style.scss';
 @import './footer/style.scss';
 
 
-.profile {
+.menu {
     @include main-column(); 
     @include topbar-spacing(); 
 }

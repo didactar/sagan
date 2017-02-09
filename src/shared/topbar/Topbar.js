@@ -1,32 +1,26 @@
 import React from 'react'
 
 
-const UserButton = () =>
-    <a href='/profile'>
-        <i 
-            className='topbar-menu-button fa fa-user'
-        ></i>
+const Menu = () =>
+    <a href='/menu'>
+        <i className='topbar-menu fa fa-bars'></i>
     </a>
 
 
 const Brand = () =>
-    <span className='topbar-brand'>
-        didactar
-    </span>
-
-
-const HomeButton = () =>
-    <a href='/'>
-        <i className='topbar-home-button fa fa-home'></i>
+    <a href='/' className='topbar-brand'>
+        <i className='topbar-brand-icon fa fa-home'></i>
+        <span className='topbar-brand-label'>
+            didactar
+        </span>
     </a>
 
 
 const Topbar = ({theme}) =>
     <div className={'topbar ' + theme } >
         <div className='topbar-content'>
-            <HomeButton />
             <Brand />
-            <UserButton />
+            <Menu />
         </div>
     </div>
 
