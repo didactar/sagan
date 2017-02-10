@@ -1,11 +1,11 @@
 import React, { Component, PropTypes } from 'react'
 import * as actions from './actions'
 import { connect } from 'react-redux'
-import EventDetail from './EventDetail'
-import { Spinner } from '../../../../shared'
+import Event from './Event'
+import { Spinner } from '../../../shared'
 
 
-class EventDetailContainer extends Component {
+class EventContainer extends Component {
 
     static propTypes = {
         eventSlug: PropTypes.string.isRequired,
@@ -19,12 +19,12 @@ class EventDetailContainer extends Component {
     render = () =>
         this.props.fetching
             ? <Spinner />
-            : <EventDetail {...this.props} />
+            : <Event {...this.props} />
 
 }
 
 
 export default connect(
-    state => state.workshop.calendar.eventDetail,
+    state => state.workshop.event,
     actions
-)(EventDetailContainer)
+)(EventContainer)

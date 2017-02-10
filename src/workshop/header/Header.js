@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react'
 
 
-const TabButton = ({activeTab, tab, icon, onClick, label}) =>
+const TabButton = ({activeTab, tab, icon, onClick}) =>
     <span 
         onClick={onClick}
         className={activeTab === tab 

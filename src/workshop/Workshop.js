@@ -11,6 +11,8 @@ const Workshop = props =>
         <Body 
             workshop={props.workshop}
             activeTab={props.activeTab}
+            showEvent={props.showEvent}
+            eventSlug={props.eventSlug}
         />
     </div>
 
@@ -20,8 +22,10 @@ Workshop.propTypes = {
     activeTab: PropTypes.string.isRequired,
     showGuide: PropTypes.func.isRequired,
     showCalendar: PropTypes.func.isRequired,
+    showEvent: PropTypes.func.isRequired,
     showCommunity: PropTypes.func.isRequired,
     showRelated: PropTypes.func.isRequired,
+    eventSlug: PropTypes.string
 }
 
 

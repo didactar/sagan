@@ -1,25 +1,31 @@
 import React, { PropTypes } from 'react'
-import EventList from './eventList'
-import EventDetail from './eventDetail'
 
 
-const Calendar = props =>
-    props.calendarTab === 'eventList'
-        ? <EventList 
-            showEventDetail={props.showEventDetail} 
-            workshop={props.workshop}
-        />
-        : <EventDetail 
-            eventSlug={props.selectedEvent}
-        />
+const EventItem = ({eventItem, showEvent}) =>
+    <div 
+        className='calendar-event' 
+        onClick={e => showEvent(eventItem.slug)}
+    >
+        <p>{eventItem.title}</p>
+    </div>
 
 
-Calendar.propTypes = {
-    calendarTab: PropTypes.string.isRequired,
-    showEventDetail: PropTypes.func.isRequired,
-    workshop: PropTypes.object.isRequired,
-    selectedEvent: PropTypes.string
+const EventList = ({events, showEvent}) =>
+    <div className='workshop-event-list'>
+        {events.map((eventItem, i) =>
+            <EventItem 
+                key={i} 
+                eventItem={eventItem} 
+                showEvent={showEvent} 
+            />
+        )}
+    </div>
+
+
+EventList.propTypes = {
+    events: PropTypes.array.isRequired,
+    showEvent: PropTypes.func.isRequired
 }
 
 
-export default Calendar
+export default EventList
