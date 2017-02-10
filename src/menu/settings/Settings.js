@@ -1,4 +1,5 @@
 import React, { PropTypes } from 'react'
+import { Input } from '../../shared/form'
 
 
 /*
@@ -69,20 +70,33 @@ const Timezone = (props, context) =>
 */
 
 
+
 const MailFrequency = () =>
-    <div>Mail Frequency</div>
+    <Input 
+        type='text'
+        label='mail frequency'
+        defaultValue='mail frequency'
+    />
 
 
 const TimeZone = () =>
-    <div>Timezone</div>
+    <Input 
+        type='text'
+        label='timezone'
+        defaultValue='timezone'
+    />
 
 
 const Language = () =>
-    <div>Language</div>
+    <Input 
+        type='text'
+        label='language'
+        defaultValue='language'
+    />
 
 
 const LoggedInSettings = props =>
-    <div className='profile-settings'>
+    <div className='form-section'>
         <Language {...props} />
         <TimeZone {...props} />
         <MailFrequency {...props} />
@@ -90,7 +104,7 @@ const LoggedInSettings = props =>
 
 
 const LoggedOutSettings = props =>
-    <div className='profile-settings'>
+    <div className='form-section'>
         <Language {...props} />
         <TimeZone {...props} />
     </div>

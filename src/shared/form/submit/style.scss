@@ -1,0 +1,36 @@
+.form-submit {
+    text-align: center;
+    padding: 1em 0;
+    margin: 1em 0 0;
+}
+
+.form-submit-button {
+    padding: 0.5em 2em;
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 10em;
+    font-size: 1.2em;
+    background: #444;
+    color: #fff;
+}
+
+.form-submit-button:hover {
+    opacity: 0.8;
+}
+
+.form-delete-button {
+    padding: 2em 0;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 1em;
+}
+
+.form-delete-button-content {
+    cursor: pointer;
+}
+
+.form-delete-button-content:hover {
+    color: #f00;
+}

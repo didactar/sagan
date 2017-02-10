@@ -1,53 +1,33 @@
 import React from 'react'
+import { Input } from '../../../shared/form'
 
 
-const Email = () =>
-    <div className='settings-input-container'> 
-        <div className='settings-label'>
-            Email
-        </div>
-        <input  
-            className='settings-input'
-            name='email' 
-            maxLength='200' 
-            type='email' 
-            defaultValue='Email' 
-        />
-    </div>
+const Email = props =>
+    <Input 
+        type='mail'
+        label='email'
+        defaultValue='foo@bar.com'
+    />
 
 
-const Location = () =>
-    <div className='settings-input-container'> 
-        <div className='settings-label'>
-            Location
-        </div>
-        <input  
-            className='settings-input'
-            name='username' 
-            maxLength='200' 
-            type='text' 
-            defaultValue='Location'
-        />
-    </div>
+const Location = props =>
+    <Input 
+        type='text'
+        label='location'
+        defaultValue='location'
+    />
 
 
-const Username = () =>
-    <div className='settings-input-container'> 
-        <div className='settings-label'>
-            Username
-        </div>
-        <input  
-            className='settings-input'
-            name='username' 
-            maxLength='200' 
-            type='text' 
-            defaultValue='Username'
-        />
-    </div>
+const Username = props =>
+    <Input 
+        type='text'
+        label='username'
+        defaultValue='username'
+    />
 
 
 export default props =>
-    <div className='settings-section' > 
+    <div className='form-section' > 
         <div className='main-average-column'>
             <Username {...props} />
             <Location {...props} />
