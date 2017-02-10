@@ -1,9 +1,11 @@
 import { combineReducers } from 'redux'
-import home from './home/reducers'
-import workshop from './workshop/reducers'
-import menu from './menu/reducers'
+import { reducer as homeReducer } from './home'
+import { reducer as workshopReducer } from './workshop'
+import { reducer as menuReducer } from './menu'
 
 
 export default combineReducers({
-    home, workshop, menu
+    home: homeReducer, 
+    workshop: workshopReducer, 
+    menu: menuReducer,
 })

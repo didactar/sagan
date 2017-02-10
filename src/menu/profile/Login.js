@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react'
-import { Input, Submit } from '../../../shared/form'
+import { Input, Submit } from '../../shared'
 
 
 const LoginButton = ({onClick}) =>

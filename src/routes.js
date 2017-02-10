@@ -1,11 +1,12 @@
 import React from 'react'
 import { Router, Route, IndexRoute, browserHistory } from 'react-router'
-import Home from './home/container'
-import Menu from './menu/container'
-import Workshop from './workshop/container'
-import About from './about/container'
-import Help from './help/container'
-import Contact from './contact/container'
+
+import Home from './home'
+import Menu from './menu'
+import Workshop from './workshop'
+import About from './about'
+import Help from './help'
+import Contact from './contact'
 
 
 export default () =>

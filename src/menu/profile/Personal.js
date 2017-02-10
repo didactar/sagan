@@ -1,5 +1,5 @@
 import React from 'react'
-import { Input } from '../../../shared/form'
+import { Input } from '../../shared'
 
 
 const Email = props =>

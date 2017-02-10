@@ -1,4 +1,4 @@
-import Input from './input/Input'
-import Submit from './submit/Submit'
+import Input from './input'
+import Submit from './submit'
 
 export { Input, Submit }

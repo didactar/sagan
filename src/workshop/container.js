@@ -2,7 +2,7 @@ import React, { Component, PropTypes } from 'react'
 import { connect } from 'react-redux'
 import * as actions from './actions'
 import Workshop from './Workshop'
-import Loading from '../shared/loading/Loading'
+import { Loading } from '../shared'
 
 
 class WorkshopContainer extends Component {

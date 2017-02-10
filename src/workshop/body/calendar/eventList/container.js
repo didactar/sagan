@@ -2,7 +2,7 @@ import React, { Component, PropTypes } from 'react'
 import { connect } from 'react-redux'
 import * as actions from './actions'
 import EventList from './EventList'
-import Spinner from '../../../../shared/loading/Spinner'
+import { Spinner } from '../../../../shared'
 
 
 class EventListContainer extends Component {

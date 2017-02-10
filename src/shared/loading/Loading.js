@@ -1,5 +1,5 @@
 import React from 'react'
-import Topbar from '../topbar/container'
+import { Topbar } from '../../shared'
 import Spinner from './Spinner'
 
 

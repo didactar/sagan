@@ -1,18 +1,18 @@
 import React, { PropTypes } from 'react'
-import Login from './login/Login'
-import Personal from './personal/Personal'
+import Login from './Login'
+import Personal from './Personal'
 
 
-const UserWrapper = props =>
+const Profile = props =>
     props.loggedIn 
         ? <Personal {...props} />
         : <Login {...props} />
 
 
-UserWrapper.propTypes = {
+Profile.propTypes = {
     loggedIn: PropTypes.bool.isRequired,
     logIn: PropTypes.func.isRequired,
 }
 
 
-export default UserWrapper
+export default Profile

@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react'
-import EventList from './eventList/container'
-import EventDetail from './eventDetail/container'
+import EventList from './eventList'
+import EventDetail from './eventDetail'
 
 
 const Calendar = props =>

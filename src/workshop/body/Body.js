@@ -1,8 +1,8 @@
 import React from 'react'
-import Calendar from './calendar/container'
-import Guide from './guide/Guide'
-import Community from './community/Community'
-import Related from './related/container'
+import Calendar from './calendar'
+import Guide from './guide'
+import Community from './community'
+import Related from './related'
 
 
 export default ({workshop, activeTab}) => {

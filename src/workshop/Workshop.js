@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react'
-import Topbar from '../shared/topbar/container'
-import Header from './header/Header'
-import Body from './body/Body'
+import Topbar from '../shared/topbar'
+import Header from './header'
+import Body from './body'
 
      
 const Workshop = props =>

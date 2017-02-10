@@ -1,8 +1,8 @@
 import React, { PropTypes } from 'react'
-import Topbar from '../shared/topbar/container'
-import Profile from './profile/Profile'
-import Settings from './settings/Settings'
-import Footer from './footer/Footer'
+import { Topbar } from '../shared'
+import Profile from './profile'
+import Settings from './settings'
+import Footer from './footer'
 
 
 const Menu = props =>

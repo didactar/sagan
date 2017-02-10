@@ -1,10 +1,10 @@
 import React, { PropTypes } from 'react'
-import WorkshopList from '../../../shared/workshops/Workshops'
+import { Workshops } from '../../../shared'
 
 
 const RelatedWorkshops = ({items, fetching}) =>
     <div className='workshop-related'>
-        <WorkshopList 
+        <Workshops 
             workshops={items} 
             fetching={fetching} 
         />

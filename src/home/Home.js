@@ -1,12 +1,11 @@
 import React from 'react'
-import WorkshopList from '../shared/workshops/Workshops'
-import Topbar from '../shared/topbar/container'
-import Welcome from './welcome/Welcome'
+import { Topbar, Workshops } from '../shared'
+import Welcome from './welcome'
 
 
 const Home = ({items, fetching}) =>
     <div className='home'>
-        <WorkshopList 
+        <Workshops 
             workshops={items} 
             fetching={fetching} 
         />

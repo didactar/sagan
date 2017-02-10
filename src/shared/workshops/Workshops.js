@@ -1,5 +1,5 @@
 import React, {PropTypes} from 'react'
-import Spinner from '../loading/Spinner'
+import { Spinner } from '../../shared'
 
 
 const Workshop = ({workshop}) =>
