@@ -1,23 +1,14 @@
 import React, { PropTypes } from 'react'
+import { Event } from '../../../../shared'
 
 
-const EventDate = ({event}) =>
-    <div className='workshop-event-date'>
-        <div className='workshop-event-date'>
-            20 Febrero 2018
-        </div>
-    </div>
+const EventWrapper = ({event}) =>
+    <Event event={event} />
 
 
-const Event = ({event}) =>
-    <div className='workshop-event-content'>
-        <EventDate />
-    </div>
-
-
-Event.propTypes = {
+EventWrapper.propTypes = {
     event: PropTypes.object.isRequired
 }
 
 
-export default Event
+export default EventWrapper

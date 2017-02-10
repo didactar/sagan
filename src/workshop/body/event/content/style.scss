@@ -1,6 +1,41 @@
 @import '../../../../mixins.scss';
 
-.workshop-event-content {
+.workshop-event {
     @include main-column(); 
     margin-top: 2em;
+}
+
+.workshop-event-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.workshop-event-date {
+    font-size: 2em;
+}
+
+.workshop-event-time,
+.workshop-event-location {
+    font-size: 1.4em;
+    margin: 0 0 0.5em 0;
+}
+
+.workshop-event-time-icon,
+.workshop-event-location-icon {
+    display: inline-block;
+    margin: 0 0.5em 0 0;
+}
+
+.workshop-event-time-label,
+.workshop-event-location-label {
+
+}
+
+.workshop-event-participate {
+    font-size: 2em;
+    cursor: pointer;
+}
+
+.workshop-event-participate:hover {
+    opacity: 0.8;
 }

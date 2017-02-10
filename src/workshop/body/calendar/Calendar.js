@@ -1,24 +1,16 @@
 import React, { PropTypes } from 'react'
+import { Event } from '../../../shared'
 
 
-const EventItem = ({eventItem, showEvent}) =>
-    <div 
-        className='calendar-event' 
-        onClick={e => showEvent(eventItem.slug)}
-    >
-        <p>{eventItem.title}</p>
-    </div>
-
-
-const EventList = ({events, showEvent}) =>
+const EventList = ({events, showEvent}) => 
     <div className='workshop-event-list'>
-        {events.map((eventItem, i) =>
-            <EventItem 
+        {events.map((event, i) => 
+            <Event
                 key={i} 
-                eventItem={eventItem} 
+                event={event} 
                 showEvent={showEvent} 
             />
-        )}
+       )}
     </div>
 
 
