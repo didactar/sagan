@@ -9,9 +9,6 @@ const TabButton = ({activeTab, tab, icon, onClick, label}) =>
             : 'workshop-navbar-tab' }
     >
         <i className={'fa ' + icon}></i>
-        <span className='workshop-navbar-label'>
-            {label}
-        </span>
     </span>
 
 
@@ -23,28 +20,30 @@ const Navbar = props =>
                 activeTab={props.activeTab} 
                 icon='fa-map-o' 
                 onClick={props.showGuide} 
-                label='guide'
             />
             <TabButton 
                 tab='calendar'
                 activeTab={props.activeTab} 
                 icon='fa-calendar-o' 
                 onClick={props.showCalendar} 
-                label='calendar'
             />
             <TabButton 
                 tab='community'
                 activeTab={props.activeTab} 
                 icon='fa-group' 
                 onClick={props.showCommunity} 
-                label='community'
             />
             <TabButton 
                 tab='related'
                 activeTab={props.activeTab} 
                 icon='fa-hashtag' 
                 onClick={props.showRelated} 
-                label='related'
+            />
+            <TabButton 
+                tab='bookmark'
+                activeTab={props.activeTab} 
+                icon='fa-heart-o' 
+                onClick={props.showRelated} 
             />
         </div>
     </div>
@@ -53,13 +52,7 @@ const Navbar = props =>
 
 const Title = ({name}) =>
     <div className='workshop-header-title'>
-        <div className='workshop-header-title-content'>
-            <div className='workshop-header-title-name'>
-                {name}
-            </div>
-            <i className={'workshop-header-title-bookmark fa fa-heart-o'} >
-            </i>
-        </div>
+        {name}
     </div>
 
 

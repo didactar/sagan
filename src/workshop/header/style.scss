@@ -21,44 +21,23 @@
 }
 
 .workshop-header-content {
+    @include main-column();
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
 }
 
 .workshop-header-title {
-    @include main-column();
-}
-
-.workshop-header-title-content {
-    padding: 0 1.7em 1.3em;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.workshop-header-title-name {
+    font-size: 2.8em;
     color: #fff;
-    font-size: 2.5em;
-}
-
-.workshop-header-title-bookmark {
-    margin-left: 2em;
-    color: #fff;
-    font-size: 1.6em;
-    cursor: pointer;
-}
-
-.workshop-header-bookmark:hover {
-    opacity: 0.8;
+    text-align: center;
 }
 
 .workshop-navbar {
-    border-top: 1px solid rgba(255, 255, 255, 0.4);
+    margin: 1.5em 0 0;
 }
 
 .workshop-navbar-tabs {
-    @include main-column();
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -69,7 +48,7 @@
     padding: 0.8em 2em;
     color: #fff;
     cursor: pointer;
-    font-size: 1.3em;
+    font-size: 1.5em;
 }
 
 .workshop-navbar-tab:hover {
@@ -81,7 +60,7 @@
     border-bottom: 0.3em solid;
     color: #fff;
     cursor: pointer;
-    font-size: 1.3em;
+    font-size: 1.5em;
 }
 
 .workshop-navbar-label {
