@@ -1,15 +1,18 @@
 import React, { PropTypes } from 'react'
+import Content from './content'
+import Participations from './participations'
 
 
-const EventDetail = ({event}) =>
-    <div className='workshop-event-detail'>
-        {event.title}
+const Event = ({eventSlug}) =>
+    <div className='workshop-event'>
+        <Content eventSlug={eventSlug} />
+        <Participations eventSlug={eventSlug} />
     </div>
 
 
-EventDetail.propTypes = {
-    event: PropTypes.object.isRequired
+Event.propTypes = {
+    eventSlug: PropTypes.string.isRequired,
 }
 
 
-export default EventDetail
+export default Event

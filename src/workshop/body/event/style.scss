@@ -1,6 +1,2 @@
-@import '../../../mixins.scss';
-
-.workshop-event-detail {
-    @include main-column(); 
-    margin-top: 2em;
-}
+@import './participations/style.scss';
+@import './content/style.scss';

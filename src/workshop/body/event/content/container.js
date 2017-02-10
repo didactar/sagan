@@ -2,7 +2,7 @@ import React, { Component, PropTypes } from 'react'
 import * as actions from './actions'
 import { connect } from 'react-redux'
 import Event from './Event'
-import { Spinner } from '../../../shared'
+import { Spinner } from '../../../../shared'
 
 
 class EventContainer extends Component {
@@ -25,6 +25,6 @@ class EventContainer extends Component {
 
 
 export default connect(
-    state => state.workshop.event,
+    state => state.workshop.event.content,
     actions
 )(EventContainer)

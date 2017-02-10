@@ -1,32 +1,9 @@
-import { REQUEST_EVENT, RECEIVE_EVENT } from './actions'
+import { combineReducers } from 'redux'
+import { reducer as contentReducer } from './content'
+import { reducer as participationsReducer } from './participations'
 
 
-const defaultState = {
-    fetching: true, 
-    event: {}
-}
-
-
-export default (state = defaultState, action) => {
-
-  switch (action.type) {
-
-    case REQUEST_EVENT:
-      return {
-        ...state,
-        fetching: true,
-      }
-
-    case RECEIVE_EVENT:
-      return {
-        ...state,
-        fetching: false,
-        event: action.event
-      }
-
-    default:
-      return state
-
-  }
-
-}
+export default combineReducers({
+    content: contentReducer, 
+    participations: participationsReducer, 
+})
