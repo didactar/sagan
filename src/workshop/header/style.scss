@@ -1,12 +1,15 @@
 @import '../../mixins.scss';
 
 .workshop-header {
+    background: #222;
+}
+
+.workshop-header-image {
     height: 25em;    
     position: relative;
     background-size: cover;
     background-position: 50% 50%;
     background-attachment: fixed;
-    position: relative;
 }
 
 .workshop-header-degrade {
@@ -23,49 +26,27 @@
 .workshop-header-content {
     @include main-column();
     display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1.3em 1.5em;
 }
 
 .workshop-header-title {
-    font-size: 2.8em;
-    color: #fff;
-    text-align: center;
-}
-
-.workshop-navbar {
-    margin: 1.5em 0 0;
-}
-
-.workshop-navbar-tabs {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    align-content: center;
-}
-
-.workshop-navbar-tab {
-    padding: 0.8em 2em;
+    font-size: 2.5em;
     color: #fff;
     cursor: pointer;
-    font-size: 1.5em;
 }
 
-.workshop-navbar-tab:hover {
-    color: #ccc;
+.workshop-header-title:hover {
+    opacity: 0.8;
 }
 
-.workshop-navbar-tab-active {
-    padding: 0.8em 2em 0.5em;
-    border-bottom: 0.3em solid;
+.workshop-header-bookmark {
     color: #fff;
+    font-size: 1.6em;
     cursor: pointer;
-    font-size: 1.5em;
 }
 
-.workshop-navbar-label {
-    display: inline-block;
-    margin: 0 0 0 0.6em;
-    font-size: 1em;
-    text-transform: capitalize;
+.workshop-header-bookmark:hover {
+    opacity: 0.8;
 }

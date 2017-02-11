@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react'
-import { Users } from '../../../../shared'
+import { Users } from '../../../shared'
 
 
 const Participations = ({participations}) =>

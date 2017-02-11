@@ -1,8 +1,8 @@
 import React, { PropTypes } from 'react'
-import { Event } from '../../../shared'
+import { Event } from '../../shared'
 
 
-const EventList = ({events, showEvent}) => 
+const Calendar = ({events, showEvent}) => 
     <div className='workshop-event-list'>
         {events.map((event, i) => 
             <Event
@@ -14,10 +14,10 @@ const EventList = ({events, showEvent}) =>
     </div>
 
 
-EventList.propTypes = {
+Calendar.propTypes = {
     events: PropTypes.array.isRequired,
     showEvent: PropTypes.func.isRequired
 }
 
 
-export default EventList
+export default Calendar

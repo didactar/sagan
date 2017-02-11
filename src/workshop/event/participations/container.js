@@ -2,7 +2,7 @@ import React, { Component, PropTypes } from 'react'
 import * as actions from './actions'
 import { connect } from 'react-redux'
 import Participations from './Participations'
-import { Spinner } from '../../../../shared'
+import { Spinner } from '../../../shared'
 
 
 class ParticipationsContainer extends Component {

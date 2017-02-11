@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react'
-import { Event } from '../../../../shared'
+import { Event } from '../../../shared'
 
 
 const EventWrapper = ({event}) =>

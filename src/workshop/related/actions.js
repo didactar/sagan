@@ -1,4 +1,4 @@
-import {BASE_URL} from '../../../constants'
+import {BASE_URL} from '../../constants'
 
 export const REQUEST_RELATED_WORKSHOPS = 'REQUEST_RELATED_WORKSHOPS'
 export const RECEIVE_RELATED_WORKSHOPS = 'RECEIVE_RELATED_WORKSHOPS'

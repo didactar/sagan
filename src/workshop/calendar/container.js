@@ -2,7 +2,7 @@ import React, { Component, PropTypes } from 'react'
 import { connect } from 'react-redux'
 import * as actions from './actions'
 import Calendar from './Calendar'
-import { Spinner } from '../../../shared'
+import { Spinner } from '../../shared'
 
 
 class CalendarContainer extends Component {

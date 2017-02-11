@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react'
-import { Workshops } from '../../../shared'
+import { Workshops } from '../../shared'
 
 
 const RelatedWorkshops = ({items, fetching}) =>

@@ -11,6 +11,7 @@ class WorkshopContainer extends Component {
         workshop: PropTypes.object.isRequired,
         fetching: PropTypes.bool.isRequired,
         activeTab: PropTypes.string.isRequired,
+        showIndex: PropTypes.func.isRequired,
         showGuide: PropTypes.func.isRequired,
         showCalendar: PropTypes.func.isRequired,
         showCommunity: PropTypes.func.isRequired,
