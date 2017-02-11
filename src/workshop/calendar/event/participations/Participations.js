@@ -1,10 +1,12 @@
 import React, { PropTypes } from 'react'
-import { Users } from '../../../shared'
+import { Users } from '../../../../shared'
 
 
 const Participations = ({participations}) =>
     <div className='workshop-event-participations'>
-        <Users users={participations} />
+        <div className='workshop-event-participations-content'>
+            <Users users={participations} />
+        </div>
     </div>
 
 

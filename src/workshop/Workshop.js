@@ -4,7 +4,6 @@ import Header from './header'
 import Calendar from './calendar'
 import Guide from './guide'
 import Community from './community'
-import Event from './event'
 import Related from './related'
 
 
@@ -13,7 +12,6 @@ const Index = props =>
         <div className='workshop-body'>
             <Guide {...props} />
             <Calendar {...props} />
-            <Community {...props} />
         </div>
         <Related {...props} />
     </div>
@@ -25,10 +23,6 @@ const Body = props => {
             return <Index {...props} />
         case 'guide':
             return <Guide {...props} />
-        case 'calendar':
-            return <Calendar {...props} />
-        case 'event':
-            return <Event {...props} />
         case 'community':
             return <Community {...props} />
         default:
@@ -50,10 +44,7 @@ Workshop.propTypes = {
     activeTab: PropTypes.string.isRequired,
     showIndex: PropTypes.func.isRequired,
     showGuide: PropTypes.func.isRequired,
-    showCalendar: PropTypes.func.isRequired,
-    showEvent: PropTypes.func.isRequired,
     showCommunity: PropTypes.func.isRequired,
-    eventSlug: PropTypes.string
 }
 
 

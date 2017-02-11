@@ -1,4 +1,4 @@
-import {BASE_URL} from '../../../constants'
+import {BASE_URL} from '../../../../constants'
 
 export const REQUEST_PARTICIPATIONS = 'REQUEST_PARTICIPATIONS'
 export const RECEIVE_PARTICIPATIONS = 'RECEIVE_PARTICIPATIONS'

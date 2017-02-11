@@ -40,10 +40,6 @@ const Header = props =>
 
 Header.propTypes = {
     workshop: PropTypes.object.isRequired,
-    activeTab: PropTypes.string.isRequired,
-    showCalendar: PropTypes.func.isRequired,
-    showCommunity: PropTypes.func.isRequired,
-    showGuide: PropTypes.func.isRequired,
     showIndex: PropTypes.func.isRequired,
 }
 

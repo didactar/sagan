@@ -1,5 +1,5 @@
 import Event from './Event'
-import reducer from './reducers'
+import { reducer } from './participations'
 
 export { reducer }
 export default Event

@@ -13,9 +13,7 @@ class WorkshopContainer extends Component {
         activeTab: PropTypes.string.isRequired,
         showIndex: PropTypes.func.isRequired,
         showGuide: PropTypes.func.isRequired,
-        showCalendar: PropTypes.func.isRequired,
-        showCommunity: PropTypes.func.isRequired,
-        eventSlug: PropTypes.string
+        showCommunity: PropTypes.func.isRequired
     }
 
 
@@ -30,4 +28,7 @@ class WorkshopContainer extends Component {
 }
 
 
-export default connect(state => state.workshop.workshop, actions)(WorkshopContainer)
+export default connect(
+    state => state.workshop.workshop, 
+    actions
+)(WorkshopContainer)

@@ -3,11 +3,6 @@ import React from 'react'
 
 const UserItem = ({user}) =>
     <div className='user-item'>
-        <div className='user-item-avatar'>
-        </div>
-        <div className='user-item-name'>
-            {user.name}
-        </div>
     </div>
 
 

@@ -11,7 +11,8 @@ class CalendarContainer extends Component {
         events: PropTypes.array.isRequired,
         workshop: PropTypes.object.isRequired,
         fetching: PropTypes.bool.isRequired,
-        showEvent: PropTypes.func.isRequired
+        expandEvent: PropTypes.func.isRequired,
+        expandedEvent: PropTypes.object.isRequired,
     }
 
     componentDidMount = () =>
@@ -26,6 +27,6 @@ class CalendarContainer extends Component {
 
 
 export default connect(
-    state => state.workshop.calendar, 
+    state => state.workshop.calendar.calendar, 
     actions
 )(CalendarContainer)

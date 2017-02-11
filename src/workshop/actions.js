@@ -5,9 +5,7 @@ export const RECEIVE_WORKSHOP = 'RECEIVE_WORKSHOP'
 
 export const SHOW_GUIDE = 'SHOW_GUIDE'
 export const SHOW_COMMUNITY = 'SHOW_COMMUNITY'
-export const SHOW_CALENDAR = 'SHOW_CALENDAR'
 export const SHOW_INDEX = 'SHOW_INDEX'
-export const SHOW_EVENT = 'SHOW_EVENT'
 
 
 export const showGuide = () => ({
@@ -20,19 +18,8 @@ export const showCommunity = () => ({
 })
 
 
-export const showCalendar = () => ({
-    type: SHOW_CALENDAR
-})
-
-
 export const showIndex = () => ({
     type: SHOW_INDEX
-})
-
-
-export const showEvent = (eventSlug) => ({
-    type: SHOW_EVENT,
-    eventSlug
 })
 
 

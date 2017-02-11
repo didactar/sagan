@@ -1,16 +1,47 @@
 @import '../../mixins.scss';
+@import './event/style.scss';
 
-.workshop-event-list {
-    @include main-column(); 
+.calendar {
     margin-top: 2em;
+    background: #555;
+    position: relative;
 }
 
-.calendar-event {
-    border-bottom: 1px solid #ccc;
-    cursor: pointer;
-    padding: 1em;
+.calendar-degrade {
+    background: -moz-linear-gradient(top, rgba(60, 60, 60, 1), transparent);
+    position: absolute;
+    top: 0;
+    height: 10em;
+    width: 100%;
 }
 
-.calendar-event:hover {
-    background: #eee;
+.calendar-header {
+    position: relative;
+    padding: 0.5em 0;
+    color: #eee;
+}
+
+.calendar-header-content {
+    @include main-column(); 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.calendar-header-icon {
+    font-size: 1.4em;
+    display: inline-block;
+    margin-right: 0.7em;
+}
+
+.calendar-header-label {
+    font-size: 1.5em;
+}
+
+.calendar-header-filter {
+    font-size: 1.5em;
+}
+
+.calendar-events {
+    position: relative;
 }

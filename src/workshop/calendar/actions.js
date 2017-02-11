@@ -2,6 +2,7 @@ import {BASE_URL} from '../../constants'
 
 export const REQUEST_EVENTS = 'REQUEST_EVENTS'
 export const RECEIVE_EVENTS = 'RECEIVE_EVENTS'
+export const EXPAND_EVENT = 'EXPAND_EVENT'
 
 
 const workshopEvents = (workshop) =>
@@ -16,6 +17,12 @@ export const requestEvents = () => ({
 export const receiveEvents = json => ({
     type: RECEIVE_EVENTS,
     items: json.data
+})
+
+
+export const expandEvent = event => ({
+    type: EXPAND_EVENT,
+    event
 })
 
 

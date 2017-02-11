@@ -1,0 +1,10 @@
+@import '../../../../mixins.scss';
+
+.workshop-event-participations {
+    padding: 0.25em 0;
+    background: #3c3c3c;
+}
+
+.workshop-event-participations-content {
+    @include main-column(); 
+}
