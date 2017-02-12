@@ -1,0 +1,48 @@
+@import '../../../mixins.scss';
+
+.menu {
+    background: #fff;
+    position: fixed;
+    top: 0;
+    z-index: 9;
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+}
+
+.menu-visible {
+    margin-top: 0;
+    transition: margin 0.2s ease;
+}
+
+.menu-invisible {
+    margin-top: -5em;
+    transition: margin 0.2s ease;
+}
+
+.menu-content {
+    @include main-column-wide(); 
+}
+
+.menu-tab {
+    text-decoration: none;
+    color: #777;
+    padding: 1.5em 2em;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.menu-tab:hover {
+    color: #333;
+}
+
+.menu-tab-label {
+    text-transform: capitalize;
+    font-size: 1.2em;
+}
+
+.menu-tab-icon {
+    display: inline-block;
+    font-size: 1.6em;
+    margin: 0 0.5em 0 0;
+}
+

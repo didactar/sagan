@@ -14,7 +14,7 @@ const Home = ({items, fetching}) =>
 
 export default ({items, fetching}) =>
     <div>
-        <Topbar color='dark' /> 
+        <Topbar theme='dark' /> 
         <Welcome />
         <Home items={items} fetching={fetching} />
     </div>

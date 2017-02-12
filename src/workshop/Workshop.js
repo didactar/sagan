@@ -33,7 +33,7 @@ const Body = props => {
      
 const Workshop = props =>
     <div>
-        <Topbar color='dark' />
+        <Topbar theme='dark' />
         <Header {...props} />
         <Body {...props} />
     </div>

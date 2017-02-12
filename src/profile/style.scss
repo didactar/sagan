@@ -1,8 +1,6 @@
 @import '../mixins.scss';
-@import './footer/style.scss';
 
-
-.menu {
+.profile {
     @include main-column(); 
     @include topbar-spacing(); 
 }

@@ -1,4 +1,5 @@
 import Topbar from './topbar'
+import { reducer as topbarReducer } from './topbar'   
 import { Loading, Spinner } from './loading'
 import { Input, Submit } from './form'
 import Workshops from './workshops'
@@ -11,5 +12,6 @@ export {
     Input, 
     Submit, 
     Workshops,
-    Users
+    Users,
+    topbarReducer,
 }
