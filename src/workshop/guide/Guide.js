@@ -1,9 +1,14 @@
 import React, { PropTypes } from 'react'
+import marked from 'marked'
 
 
-const Guide = props =>
+const Guide = ({workshop}) =>
     <div className='workshop-guide'>
-        <h3>{props.workshop.description}</h3>
+        <div 
+            className='workshop-guide-content'
+            dangerouslySetInnerHTML={{__html: marked(workshop.guide)}}
+        >
+        </div>
     </div>
 
 

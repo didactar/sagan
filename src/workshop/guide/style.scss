@@ -2,5 +2,30 @@
 
 .workshop-guide {
     @include main-column(); 
-    margin-top: 2em;
+}
+
+.workshop-guide-content {
+
+    margin: 3em 0;
+
+    h1, h2, h3 {
+        color: #000;
+        font-weight: bold;
+    }
+
+    a {
+        font-size: 1.1em;
+        color: #be49d5;
+        text-decoration: none;
+    }
+
+    p {
+        color: #222;
+        font-size: 1.2em;
+    }
+    
+    a, p {
+        font-family: 'Slabo 27px', sans-serif;
+    }
+
 }
