@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react'
-import { Input } from '../../shared'
+import { Input, Topbar } from '../shared'
 
 
 /*
@@ -96,17 +96,21 @@ const Language = () =>
 
 
 const LoggedInSettings = props =>
-    <div className='form-section'>
-        <Language {...props} />
-        <TimeZone {...props} />
-        <MailFrequency {...props} />
+    <div className='settings'>
+        <div className='form-section'>
+            <Language {...props} />
+            <TimeZone {...props} />
+            <MailFrequency {...props} />
+        </div>
     </div>
 
 
 const LoggedOutSettings = props =>
-    <div className='form-section'>
-        <Language {...props} />
-        <TimeZone {...props} />
+    <div className='settings'>
+        <div className='form-section'>
+            <Language {...props} />
+            <TimeZone {...props} />
+        </div>
     </div>
 
 
@@ -116,9 +120,17 @@ const Settings = props =>
         : <LoggedOutSettings {...props} />
 
 
+const SettingsWrapper = props =>
+    <div>
+        <Topbar theme='light' />
+        <Settings />
+    </div>
+
+
+
 Settings.propTypes = {
     loggedIn: PropTypes.bool.isRequired,
 }
 
 
-export default Settings
+export default SettingsWrapper
