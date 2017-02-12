@@ -2,20 +2,27 @@ import React, {PropTypes} from 'react'
 import { Spinner } from '../../shared'
 
 
+const WorkshopText = ({workshop}) =>
+    <div className='workshop-item-text'>
+        <div className='workshop-item-text-content'>
+            <div className='workshop-item-text-name'>
+                {workshop.name}
+            </div>
+            <div className='workshop-item-text-next'>
+                20 February 2017
+            </div>
+        </div>
+    </div>
+
+
 const Workshop = ({workshop}) =>
-    <div
+    <a
         className='workshop-item'
         style={{'backgroundImage': 'url(/images/' + workshop.image + '.jpg)'}}
+        href={'/workshop/' + workshop.slug }
     >
-        <a 
-            href={'/workshop/' + workshop.slug }
-            className='workshop-item-link'
-        >
-            <span className='workshop-item-name'>
-                {workshop.name}
-            </span>
-        </a>
-    </div>
+        <WorkshopText workshop={workshop} />
+    </a>
 
 
 const Workshops = ({workshops}) =>
