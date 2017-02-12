@@ -28,6 +28,11 @@ const LogOut = ({logOut}) =>
 const MenuContent = ({loggedIn, logOut}) =>
     <div className='menu-content'>
         <MenuTab 
+            label='home'
+            icon='fa-home'
+            link='/'
+        />
+        <MenuTab 
             label='profile'
             icon='fa-user'
             link='/profile'
@@ -46,11 +51,6 @@ const MenuContent = ({loggedIn, logOut}) =>
             label='help'
             icon='fa-support'
             link='/help'
-        />
-        <MenuTab 
-            label='contact'
-            icon='fa-envelope'
-            link='/contact'
         />
         {loggedIn 
             ? <LogOut logOut={logOut} /> 

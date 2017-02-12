@@ -17,7 +17,7 @@ const BrandButton = () =>
 
 
 const Bar = ({theme, showMenu}) =>
-    <div className={ theme === 'dark' ? 'topbar-bar-dark' : 'topbar-light' } >
+    <div className={ theme === 'dark' ? 'topbar-bar-dark' : 'topbar-bar-light' } >
         <div className='topbar-bar'>
             <BrandButton />
             <MenuButton showMenu={showMenu} />
