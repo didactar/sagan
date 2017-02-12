@@ -1,10 +1,21 @@
 @import '../../../../mixins.scss';
 
-.workshop-event-participations {
-    padding: 0.25em 0;
-    background: #3c3c3c;
+.participations {
+    transition: height 0.2s ease;
+    transition: padding 0.2s ease;
+    overflow: hidden;
 }
 
-.workshop-event-participations-content {
+.participations-hidden {
+    padding: 0;
+    height: 0;
+}
+
+.participations-visible {
+    padding: 0.25em 0;
+    min-height: 5em;
+}
+
+.participations-users {
     @include main-column(); 
 }

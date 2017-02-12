@@ -2,7 +2,6 @@ import React, { Component, PropTypes } from 'react'
 import * as actions from './actions'
 import { connect } from 'react-redux'
 import Participations from './Participations'
-import { Spinner } from '../../../../shared'
 
 
 class ParticipationsContainer extends Component {
@@ -17,9 +16,7 @@ class ParticipationsContainer extends Component {
         this.props.fetchParticipations(this.props.event.slug)
 
     render = () =>
-        this.props.fetching
-            ? <Spinner />
-            : <Participations {...this.props} />
+        <Participations {...this.props} />
 
 }
 

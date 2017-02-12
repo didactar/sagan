@@ -2,12 +2,6 @@ import React, { PropTypes } from 'react'
 import Participations from './participations'
 
 
-const EventParticipations = ({event, expandedEvent}) =>
-    event.slug === expandedEvent.slug 
-        ?  <Participations event={event} />
-        : null
-
-
 const Participate = ({event, expandEvent}) =>
     <div className='event-participate'>
         <span 
@@ -72,9 +66,12 @@ const EventContent = ({event, expandEvent}) =>
 
 
 const Event = props =>
-    <div className='event'>
+    <div className={ 
+        props.event.slug === props.expandedEvent.slug 
+        ? 'event-expanded event' : 'event'}
+    >
         <EventContent {...props} />
-        <EventParticipations {...props} />
+        <Participations {...props} />
     </div>
 
 

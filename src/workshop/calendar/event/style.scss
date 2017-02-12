@@ -2,12 +2,13 @@
 @import './participations/style.scss';
 
 .event {
-    border-bottom: 1px solid #6f6f6f;
     color: #eee;
+    background: transparent;
+    transition: background 0.2s ease;
 }
 
-.event:hover {
-    background: #5f5f5f;
+.event-expanded {
+    background: #444;
 }
 
 .event-content {
