@@ -1,17 +1,9 @@
 @import './header/style.scss';
-@import './calendar/style.scss';
+@import './body/style.scss';
 @import './related/style.scss';
-@import './guide/style.scss';
-@import './community/style.scss';
 
 
-.workshop-index {
+.workshop {
     background: #333;
     padding-bottom: 22em;
-}
-
-.workshop-body {
-    background: #fff;
-    z-index: 2;
-    position: relative;
 }

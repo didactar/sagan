@@ -1,12 +1,10 @@
-@import '../../mixins.scss';
+@import '../../../mixins.scss';
 
 .workshop-guide {
     @include main-column(); 
 }
 
 .workshop-guide-content {
-
-    margin: 3em 0;
 
     h1, h2, h3 {
         color: #000;

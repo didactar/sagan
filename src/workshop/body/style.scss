@@ -1,0 +1,10 @@
+@import './guide/style.scss';
+@import './calendar/style.scss';
+
+
+.workshop-body {
+    background: #fff;
+    z-index: 2;
+    position: relative;
+    padding: 3em 0 6em;
+}

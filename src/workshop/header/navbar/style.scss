@@ -1,0 +1,39 @@
+@import '../../../mixins.scss';
+
+.workshop-navbar {
+    margin: 1.5em 0 0;
+}
+
+.workshop-navbar-tabs {
+    @include main-column();
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+}
+
+.workshop-navbar-tab {
+    padding: 0.8em 2em;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.5em;
+}
+
+.workshop-navbar-tab:hover {
+    color: #ccc;
+}
+
+.workshop-navbar-tab-active {
+    padding: 0.8em 2em 0.5em;
+    border-bottom: 0.3em solid;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.5em;
+}
+
+.workshop-navbar-label {
+    display: inline-block;
+    margin: 0 0 0 0.6em;
+    font-size: 1em;
+    text-transform: capitalize;
+}

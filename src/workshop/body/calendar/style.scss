@@ -1,0 +1,10 @@
+@import '../../../mixins.scss';
+@import './event/style.scss';
+
+.calendar {
+    position: relative;
+}
+
+.calendar-events {
+    position: relative;
+}

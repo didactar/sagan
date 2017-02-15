@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react'
-import { Spinner, Users } from '../../../../shared'
+import { Spinner, Users } from '../../../../../shared'
 
 
 const UserList = props =>

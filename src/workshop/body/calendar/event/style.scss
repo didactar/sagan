@@ -1,14 +1,14 @@
-@import '../../../mixins.scss';
+@import '../../../../mixins.scss';
 @import './participations/style.scss';
 
 .event {
-    color: #eee;
+    color: #333;
     background: transparent;
     transition: background 0.2s ease;
 }
 
 .event-expanded {
-    background: #444;
+    background: #eee;
 }
 
 .event-content {

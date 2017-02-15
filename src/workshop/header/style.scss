@@ -1,4 +1,5 @@
-@import '../../mixins.scss';
+@import './navbar/style';
+@import './content/style';
 
 .workshop-header {
     background: #222;
@@ -21,32 +22,4 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-}
-
-.workshop-header-content {
-    @include main-column();
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 1.3em 1.5em;
-}
-
-.workshop-header-title {
-    font-size: 2.8em;
-    color: #fff;
-    cursor: pointer;
-}
-
-.workshop-header-title:hover {
-    opacity: 0.8;
-}
-
-.workshop-header-bookmark {
-    color: #fff;
-    font-size: 1.6em;
-    cursor: pointer;
-}
-
-.workshop-header-bookmark:hover {
-    opacity: 0.8;
 }
