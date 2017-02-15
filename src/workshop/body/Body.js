@@ -1,9 +1,11 @@
 import React from 'react'
 import Calendar from './calendar'
 import Guide from './guide'
+import Sidenav from './sidenav'
+import Tags from './tags'
 
 
-const Tab = ({workshop, activeTab}) => {
+const TabContent = ({workshop, activeTab}) => {
     switch (activeTab) {
         case 'guide':
             return <Guide workshop={workshop} />
@@ -15,9 +17,17 @@ const Tab = ({workshop, activeTab}) => {
 }
 
 
+const Tab = props =>
+    <div className='workshop-body-tab'>
+        <TabContent {...props} />
+    </div>
+
+
 const Body = props =>
     <div className='workshop-body'>
+        <Sidenav {...props} />
         <Tab {...props} />
+        <Tags {...props} />
     </div>
 
 

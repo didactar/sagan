@@ -11,7 +11,7 @@ const Header = props =>
         >
             <div className='workshop-header-degrade'>
                 <HeaderContent {...props} />
-                <Navbar {...props} />
+                {false ?  <Navbar {...props} /> : null}
             </div>
         </div>
     </div>

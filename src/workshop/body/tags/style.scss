@@ -1,0 +1,18 @@
+.workshop-tags {
+    margin-left: 8em;
+    width: 12em;
+}
+
+.workshop-tags-tag {
+    cursor: pointer;
+    display: block;
+    margin: 0 0 1.3em;
+    text-transform: capitalize;
+    color: #aaa;
+    font-size: 1.2em;
+    transition: color 0.1s ease;
+}
+
+.workshop-tags-tag:hover {
+    color: #000;
+}

@@ -21,13 +21,20 @@
 
 .menu-content {
     @include main-column-wide(); 
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
 }
 
 .menu-tab {
     text-decoration: none;
     color: #777;
+    transition: color 0.1s ease;
     padding: 1.5em 2em;
-    display: inline-block;
+    display: flex;
+    align-items: center;
+    align-content: center;
     cursor: pointer;
 }
 
@@ -42,7 +49,7 @@
 
 .menu-tab-icon {
     display: inline-block;
-    font-size: 1.6em;
+    font-size: 1.8em;
     margin: 0 0.5em 0 0;
 }
 

@@ -1,10 +1,8 @@
-@import '../../../mixins.scss';
-
 .workshop-guide {
-    @include main-column(); 
-}
 
-.workshop-guide-content {
+    h1 {
+        margin-top: 0;
+    }
 
     h1, h2, h3 {
         color: #000;
@@ -18,8 +16,8 @@
     }
 
     p {
-        color: #222;
-        font-size: 1.2em;
+        color: #111;
+        font-size: 1.3em;
     }
     
     a, p {
