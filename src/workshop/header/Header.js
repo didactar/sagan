@@ -1,6 +1,5 @@
 import React, { PropTypes } from 'react'
 import HeaderContent from './content'
-import Navbar from './navbar'
 
 
 const Header = props =>
@@ -11,7 +10,6 @@ const Header = props =>
         >
             <div className='workshop-header-degrade'>
                 <HeaderContent {...props} />
-                {false ?  <Navbar {...props} /> : null}
             </div>
         </div>
     </div>
@@ -19,9 +17,6 @@ const Header = props =>
 
 Header.propTypes = {
     workshop: PropTypes.object.isRequired,
-    activeTab: PropTypes.string.isRequired,
-    showCalendar: PropTypes.func.isRequired,
-    showGuide: PropTypes.func.isRequired,
 }
 
 

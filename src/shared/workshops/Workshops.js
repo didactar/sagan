@@ -18,7 +18,6 @@ const WorkshopText = ({workshop}) =>
 const Workshop = ({workshop}) =>
     <a
         className='workshop-item'
-        style={{'backgroundImage': 'url(/images/' + workshop.image + '.jpg)'}}
         href={'/workshop/' + workshop.slug }
     >
         <WorkshopText workshop={workshop} />

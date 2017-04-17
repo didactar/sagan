@@ -3,27 +3,20 @@
 .workshop-header-content {
     @include main-column();
     display: flex;
-    justify-content: space-between;
     align-items: center;
     padding: 0 1.3em 1.5em;
+    text-align: center;
 }
 
 .workshop-header-title {
-    font-size: 3em;
+    font-size: 2.5em;
     color: #fff;
     cursor: pointer;
+    text-align: center;
+    width: 100%;
+    margin: 0 0 0.5em;
 }
 
 .workshop-header-title:hover {
-    opacity: 0.8;
-}
-
-.workshop-header-bookmark {
-    color: #fff;
-    font-size: 1.7em;
-    cursor: pointer;
-}
-
-.workshop-header-bookmark:hover {
     opacity: 0.8;
 }

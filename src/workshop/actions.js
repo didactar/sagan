@@ -3,19 +3,6 @@ import {BASE_URL} from '../constants'
 export const REQUEST_WORKSHOP = 'REQUEST_WORKSHOP'
 export const RECEIVE_WORKSHOP = 'RECEIVE_WORKSHOP'
 
-export const SHOW_GUIDE = 'SHOW_GUIDE'
-export const SHOW_CALENDAR = 'SHOW_CALENDAR'
-
-
-export const showGuide = () => ({
-    type: SHOW_GUIDE
-})
-
-
-export const showCalendar = () => ({
-    type: SHOW_CALENDAR
-})
-
 
 const workshopDetail = (workshop) =>
     BASE_URL + 'workshops/' + workshop

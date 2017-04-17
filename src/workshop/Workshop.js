@@ -16,9 +16,6 @@ const Workshop = props =>
 
 Workshop.propTypes = {
     workshop: PropTypes.object.isRequired,
-    activeTab: PropTypes.string.isRequired,
-    showGuide: PropTypes.func.isRequired,
-    showCalendar: PropTypes.func.isRequired,
 }
 
 
