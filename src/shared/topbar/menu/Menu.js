@@ -73,8 +73,8 @@ Menu.propTypes = {
     menuIsVisible: PropTypes.bool.isRequired,
     menuMouseUp: PropTypes.func.isRequired,
     menuMouseDown: PropTypes.func.isRequired,
-    loggedIn: PropTypes.bool.isRequired,
-    logOut: PropTypes.func.isRequired,
+    loggedIn: PropTypes.bool,
+    logOut: PropTypes.func,
 }
 
 export default Menu

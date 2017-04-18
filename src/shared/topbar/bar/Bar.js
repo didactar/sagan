@@ -27,7 +27,7 @@ const Bar = ({theme, showMenu}) =>
 
 Bar.propTypes = {
     showMenu: PropTypes.func.isRequired,
-    theme: PropTypes.string.isRequired,
+    theme: PropTypes.string,
 }
 
 export default Bar

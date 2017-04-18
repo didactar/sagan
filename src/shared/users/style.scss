@@ -3,14 +3,27 @@
 }
 
 .user-item {
-    margin: 0.5em;
-    background: #666;
-    width: 5em;
-    height: 5em;
+    margin: 1em;
     cursor: pointer;
-    border-radius: 6px;
+    width: 8em;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 
 .user-item:hover {
-    background: #777;
+    opacity: 0.7;
+}
+
+.user-item-picture {
+    background: #666;
+    width: 5.5em;
+    height: 5.5em;
+    border-radius: 10em;
+    margin-bottom: 0.5em;
+}
+
+.user-item-name {
+    text-align: center;
+    color: #333;
 }

@@ -1,7 +1,8 @@
 import React, { PropTypes } from 'react'
 import Topbar from '../shared/topbar'
 import Header from './header'
-import Body from './body'
+import Guide from './guide'
+import Community from './community'
 import Related from './related'
 
      
@@ -9,7 +10,8 @@ const Workshop = props =>
     <div className='workshop'>
         <Topbar theme='dark' />
         <Header {...props} />
-        <Body {...props} />
+        <Guide {...props} />
+        <Community {...props} />
         <Related {...props} />
     </div>
 
