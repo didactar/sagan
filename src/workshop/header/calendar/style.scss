@@ -7,11 +7,9 @@
 
 .calendar-date {
     display: flex;
-    padding: 1.3em;
+    padding: 1.5em 2.3em;
     cursor: pointer;
     align-items: center;
-    align-content: center;
-    flex-direction: column;
 }
 
 .calendar-date:hover {
@@ -20,10 +18,21 @@
 
 .calendar-date-day {
     color: #fff;
-    font-size: 2.3em;
+    font-size: 3.2em;
+    margin-right: 0.2em;
+}
+
+.calendar-date-monthhour {
+    color: #fff;
+    font-size: 1em;
 }
 
 .calendar-date-month {
     color: #fff;
     font-size: 1em;
+}
+
+.calendar-date-hour {
+    color: #fff;
+    font-size: 1.2em;
 }
