@@ -11,9 +11,11 @@ const Profile = props =>
 
 
 const ProfileWrapper = props =>
-    <div className='profile'>
+    <div>
         <Topbar theme='light' /> 
-        <Profile {...props} />
+        <div className='profile'>
+            <Profile {...props} />
+        </div>
     </div>
 
 

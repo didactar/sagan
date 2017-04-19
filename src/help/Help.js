@@ -11,6 +11,6 @@ const Help = () =>
 
 export default () =>
     <div>
-        <Topbar /> 
+        <Topbar theme='light' />
         <Help />
     </div>
