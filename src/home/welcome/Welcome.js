@@ -25,9 +25,14 @@ const Learn = () =>
 
 export default () =>
     <div className='welcome'>
-        <div className='welcome-degrade'>
-            <div className='welcome-content'>
-                <Learn />
+        <div 
+            className='welcome-image'
+            style={{'backgroundImage': 'url(/images/didactar_01.jpg)'}}
+        >
+            <div className='welcome-degrade'>
+                <div className='welcome-content'>
+                    <Learn />
+                </div>
             </div>
         </div>
     </div>

@@ -1,14 +1,18 @@
 .workshop-guide {
-    background: #fff;
     z-index: 2;
     position: relative;
-    padding: 2em 5em;
-    column-width: 24em;
+    padding: 0.5em 1em;
+    background: #f0f0f0;
+    column-count: 5;
+    column-gap: 0;
 }
 
 .workshop-guide-panel {
     display: inline-block;
-    margin: 1.5em;
+    padding: 2.5em;
+    background: #fff;
+    border: 1px solid #ddd;
+    margin: 0.5em;
 }
 
 .workshop-guide-panel-title {

@@ -1,15 +1,19 @@
 .welcome {
+    height: 33em;
+    position: relative;
     text-align: center;
-    height: 33em;    
+}
+
+.welcome-image {
+    text-align: center;
     background-size: cover;
     background-position: 50% 50%;
     background-attachment: fixed;
-    background: #666;
-    position: relative;
+    height: 100%;
 }
 
 .welcome-degrade {
-    background: -moz-linear-gradient(top, transparent, rgba(3,3,3,0.6));
+    background: -webkit-linear-gradient(top, transparent, rgba(3,3,3,0.6));
     position: absolute;
     bottom: 0;
     height: 15em;

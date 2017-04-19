@@ -3,7 +3,6 @@
 @import './content/style';
 
 .workshop-header {
-    background: #222;
 }
 
 .workshop-header-image {
@@ -16,7 +15,7 @@
 }
 
 .workshop-header-degrade {
-    background: -moz-linear-gradient(top, transparent, rgba(3,3,3,0.7));
+    background: -webkit-linear-gradient(top, transparent, rgba(3,3,3,0.8));
     width: 100%;
     display: flex;
     flex-direction: column;
