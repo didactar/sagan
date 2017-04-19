@@ -2,9 +2,29 @@
     background: #fff;
     z-index: 2;
     position: relative;
-    padding: 5em 0 6em;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    height: 20em;
+    padding: 2em 5em;
+    column-width: 24em;
+}
+
+.workshop-guide-panel {
+    display: inline-block;
+    margin: 1.5em;
+}
+
+.workshop-guide-panel-title {
+    color: #111;
+    font-size: 1.3em;
+    margin: 0 0 1em;
+}
+
+.workshop-guide-panel-resource {
+    color: #333;
+    margin: 0.5em 0;
+    text-decoration: none;
+    display: block;
+    cursor: pointer;
+}
+
+.workshop-guide-panel-resource:hover {
+    color: #777;
 }
