@@ -1,5 +1,5 @@
 import React  from 'react'
-import { Users } from '../../shared'
+import { Users, Spinner } from '../../shared'
 
 const users = [
     {user: {
@@ -53,34 +53,35 @@ const users = [
    }}
 ]
 
-/*
-const UserList = props =>
-    <div className='participations-users'>
-        {props.fetching
-            ? <Spinner />
-            : <Users users={props.participations} />}
+
+const UserList = ({fetching}) =>
+    fetching
+        ? <Spinner />
+        : <Users users={users} />
+
+
+
+const CommunityTab = ({name}) =>
+    <div className='workshop-community-tab'>
+        {name}
     </div>
-*/
 
 
-const UserList = props =>
-    <div className='workshop-community-users'>
-        <Users users={users} />
+
+const CommunityTabs = props =>
+    <div className='workshop-community-tabs'>
+        <CommunityTab name='community' />
+        <CommunityTab name='educators' />
+        <CommunityTab name='moderators' />
+        <CommunityTab name='learners' />
     </div>
 
 
 const Community = props =>
     <div className='workshop-community'>
-        <UserList {...props} />
+        <CommunityTabs {...props} />
+        <UserList fetching={false} />
     </div>
 
-/*
-Community.propTypes = {
-    event: PropTypes.object.isRequired,
-    expandedEvent: PropTypes.object.isRequired,
-    participations: PropTypes.array.isRequired,
-    fetching: PropTypes.bool.isRequired,
-}
-*/
 
 export default Community

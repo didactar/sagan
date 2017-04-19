@@ -1,9 +1,11 @@
 .users {
     display: flex;
+    padding: 1.5em 0;
+    justify-content: center;
 }
 
 .user-item {
-    margin: 1em;
+    margin: 0.5em;
     cursor: pointer;
     width: 8em;
     display: flex;
@@ -17,8 +19,8 @@
 
 .user-item-picture {
     background: #666;
-    width: 5.5em;
-    height: 5.5em;
+    width: 6em;
+    height: 6em;
     border-radius: 10em;
     margin-bottom: 0.5em;
 }
