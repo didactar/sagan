@@ -1,16 +1,16 @@
 .users {
     display: flex;
-    padding: 1.5em 0;
+    padding: 2em 0;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .user-item {
-    margin: 0.5em;
+    margin: 0.5em 1em;
     cursor: pointer;
-    width: 8em;
+    width: 13em;
     display: flex;
     align-items: center;
-    flex-direction: column;
 }
 
 .user-item:hover {
@@ -19,13 +19,13 @@
 
 .user-item-picture {
     background: #666;
-    width: 6em;
-    height: 6em;
+    width: 3.5em;
+    height: 3.5em;
     border-radius: 10em;
-    margin-bottom: 0.5em;
+    margin-right: 1em;
 }
 
 .user-item-name {
-    text-align: center;
     color: #333;
+    width: 8em; 
 }
