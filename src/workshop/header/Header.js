@@ -1,5 +1,13 @@
 import React, { PropTypes } from 'react'
-import HeaderContent from './content'
+import Content from './content'
+import Calendar from './calendar'
+
+
+const HeaderDegrade = props =>
+    <div className='workshop-header-degrade'>
+        <Content {...props} />
+        <Calendar {...props} />
+    </div>
 
 
 const Header = props =>
@@ -8,9 +16,7 @@ const Header = props =>
             className='workshop-header-image'
             style={{'backgroundImage': 'url(/images/' + props.workshop.image + '.jpg)'}}
         >
-            <div className='workshop-header-degrade'>
-                <HeaderContent {...props} />
-            </div>
+            <HeaderDegrade {...props } />
         </div>
     </div>
 

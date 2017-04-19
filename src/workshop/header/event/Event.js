@@ -74,12 +74,12 @@ const Event = props =>
         <Participations {...props} />
     </div>
 
-
+/*
 Event.propTypes = {
     event: PropTypes.object.isRequired,
     expandEvent: PropTypes.func.isRequired,
     expandedEvent: PropTypes.object.isRequired,
 }
-
+*/
 
 export default Event

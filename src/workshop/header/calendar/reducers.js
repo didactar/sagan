@@ -1,5 +1,3 @@
-import { combineReducers } from 'redux'
-import { reducer as participationsReducer } from './event'
 import { REQUEST_EVENTS, RECEIVE_EVENTS, EXPAND_EVENT } from './actions'
 
 
@@ -10,7 +8,7 @@ const defaultState = {
 }
 
 
-const calendar = (state = defaultState, action) => {
+export default (state = defaultState, action) => {
 
   switch (action.type) {
 
@@ -40,9 +38,3 @@ const calendar = (state = defaultState, action) => {
   }
 
 }
-
-
-export default combineReducers({
-    calendar,
-    participations: participationsReducer,
-})

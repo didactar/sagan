@@ -4,19 +4,13 @@
     @include main-column();
     display: flex;
     align-items: center;
-    padding: 0 1.3em 1.5em;
+    padding: 17em 1.3em 4em;
     text-align: center;
 }
 
 .workshop-header-title {
-    font-size: 2.5em;
+    font-size: 2.8em;
     color: #fff;
-    cursor: pointer;
     text-align: center;
     width: 100%;
-    margin: 0 0 0.5em;
-}
-
-.workshop-header-title:hover {
-    opacity: 0.8;
 }

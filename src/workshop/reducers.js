@@ -1,4 +1,5 @@
 import { combineReducers } from 'redux'
+//import { calendar as calendarReducer } from './header/calendar'
 import { reducer as relatedReducer } from './related'
 
 
@@ -39,5 +40,6 @@ const workshop = (state = defaultState, action) => {
 
 export default combineReducers({
     workshop, 
+    //calendar: calendarReducer,
     related: relatedReducer,
 })

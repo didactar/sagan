@@ -1,4 +1,5 @@
 @import './calendar/style';
+@import './event/style.scss';
 @import './content/style';
 
 .workshop-header {
@@ -6,18 +7,16 @@
 }
 
 .workshop-header-image {
-    height: 25em;    
-    position: relative;
     background-size: cover;
     background-position: 50% 50%;
     background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
 }
 
 .workshop-header-degrade {
     background: -moz-linear-gradient(top, transparent, rgba(3,3,3,0.7));
-    position: absolute;
-    bottom: 0;
-    height: 20em;
     width: 100%;
     display: flex;
     flex-direction: column;

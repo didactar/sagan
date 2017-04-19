@@ -1,31 +1,43 @@
 import React, { PropTypes } from 'react'
-import Event from './event'
 
 
-const Events = ({events, expandEvent, expandedEvent}) => 
-    <div className='calendar-events'>
-        {events.map((event, i) => 
-            <Event
-                key={i} 
-                event={event} 
-                expandEvent={expandEvent}
-                expandedEvent={expandedEvent}
-            />
-       )}
+const CalendarDate = ({event}) =>
+    <div className='calendar-date'>
+        <div className='calendar-date-day'>
+            20
+        </div>
+        <div className='calendar-date-month'>
+            Jul 2017
+        </div>
     </div>
 
 
 const Calendar = props => 
     <div className='calendar'>
-        <Events {...props} />
+        <CalendarDate />
+        <CalendarDate />
+        <CalendarDate />
+        <CalendarDate />
+        <CalendarDate />
+        <CalendarDate />
+        <CalendarDate />
+        <CalendarDate />
+        <CalendarDate />
+        <CalendarDate />
+        <CalendarDate />
+        <CalendarDate />
+        <CalendarDate />
+        <CalendarDate />
+        <CalendarDate />
+        <CalendarDate />
     </div>
 
-
+/*
 Calendar.propTypes = {
     events: PropTypes.array.isRequired,
     expandEvent: PropTypes.func.isRequired,
     expandedEvent: PropTypes.object.isRequired
 }
-
+*/
 
 export default Calendar
