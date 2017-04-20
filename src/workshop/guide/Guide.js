@@ -77,7 +77,6 @@ const Resource1 = props =>
 
 const Guide = props =>
     <div className='workshop-guide'>
-        <Resource4 />
         <Resource1 />
         <Resource2 />
         <Resource3 />
@@ -86,6 +85,7 @@ const Guide = props =>
         <Resource3 />
         <Resource4 />
         <Resource2 />
+        <Resource4 />
         <Resource2 />
         <Resource3 />
         <Resource4 />
