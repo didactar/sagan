@@ -1,0 +1,80 @@
+@import './participations/style.scss';
+
+.event {
+    color: #333;
+    background: transparent;
+    transition: background 0.2s ease;
+    padding: 0 0.5em 1em;
+    border-bottom: 1px solid #ddd;
+    margin: 0 0 1em;
+}
+
+.event-expanded {
+}
+
+.event-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.event-content-data {
+    display: flex;
+    align-items: center;
+    cursor: pointer
+}
+
+.event-content-data:hover {
+    opacity: 0.8;
+}
+
+.event-date {
+    margin: 0 1em 0 0;
+    text-align: center;
+}
+
+.event-date-day {
+    font-size: 2.3em;
+}
+
+.event-date-month {
+    font-size: 1.1em;
+}
+
+.event-time,
+.event-location {
+    margin: 0.3em 0;
+}
+
+.event-time-icon,
+.event-location-icon {
+    display: inline-block;
+    margin: 0 0.5em 0 0;
+    font-size: 1.5em;
+}
+
+.event-time-label,
+.event-location-label {
+    font-size: 1.2em;
+}
+
+.event-participate {
+    display: flex;
+    align-items: center;
+}
+
+.event-participate-icon {
+    font-size: 1.6em;
+    cursor: pointer;
+}
+
+.event-participate-count {
+    margin: 0 0.7em 0 0;
+    font-size: 1.3em;
+    cursor: pointer;
+}
+
+.event-participate-icon:hover,
+.event-participate-count:hover {
+    opacity: 0.8;
+}

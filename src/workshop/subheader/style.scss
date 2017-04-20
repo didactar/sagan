@@ -1,0 +1,11 @@
+@import './calendar/style.scss';
+@import './community/style.scss';
+@import './resources/style.scss';
+@import './publish/style.scss';
+@import './subscribe/style.scss';
+
+
+.subheader {
+    border-bottom: 1px solid #ddd;
+    background: #fff;
+}

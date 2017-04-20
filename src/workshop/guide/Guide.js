@@ -1,108 +1,105 @@
 import React from 'react'
 
 
-const Resource = props =>
-    <a 
+const Resource4 = props =>
+    <span 
         href='/'
-        className='workshop-guide-panel-resource'
+        className='resource'
     >
-        Resource link about this topic and panel
-    </a>
-
-
-const Panel5 = props =>
-    <div className='workshop-guide-panel'>
-        <div className='workshop-guide-panel-title'>
-            Guide Panel Title
+        <div className='resource-image'>
         </div>
-        <Resource />
-        <Resource />
-        <Resource />
-        <Resource />
-        <Resource />
-        <Resource />
-        <Resource />
-        <Resource />
-        <Resource />
-        <Resource />
-        <Resource />
-        <Resource />
-        <Resource />
-    </div>
-
-
-const Panel4 = props =>
-    <div className='workshop-guide-panel'>
-        <div className='workshop-guide-panel-title'>
-            Guide Panel Title
+        <div className='resource-image'>
         </div>
-        <Resource />
-        <Resource />
-        <Resource />
-        <Resource />
-        <Resource />
-        <Resource />
-        <Resource />
-        <Resource />
-        <Resource />
-        <Resource />
-    </div>
-
-
-const Panel3 = props =>
-    <div className='workshop-guide-panel'>
-        <div className='workshop-guide-panel-title'>
-            Guide Panel Title
+        <div className='resource-content'>
+            <div className='resource-title'>
+                Longer resource title
+            </div>
+            <div className='resource-description'>
+                Resource link about the topic of this workshop.
+                Resource link about the topic of this workshop.
+                Resource link about the topic of this workshop.
+                Resource link about the topic of this workshop.
+            </div>
         </div>
-        <Resource />
-        <Resource />
-        <Resource />
-        <Resource />
-        <Resource />
-        <Resource />
-        <Resource />
-        <Resource />
-    </div>
+    </span>
 
 
-const Panel2 = props =>
-    <div className='workshop-guide-panel'>
-        <div className='workshop-guide-panel-title'>
-            Guide Panel Title
+const Resource3 = props =>
+    <span 
+        href='/'
+        className='resource'
+    >
+        <div className='resource-image'>
         </div>
-        <Resource />
-        <Resource />
-        <Resource />
-        <Resource />
-        <Resource />
-        <Resource />
-    </div>
-
-
-const Panel1 = props =>
-    <div className='workshop-guide-panel'>
-        <div className='workshop-guide-panel-title'>
-            Guide Panel Title
+        <div className='resource-content'>
+            <div className='resource-title'>
+                Resource title
+            </div>
+            <div className='resource-description'>
+                Resource link about the topic of this workshop.
+                Resource link about the topic of this workshop.
+            </div>
         </div>
-        <Resource />
-        <Resource />
-        <Resource />
-        <Resource />
-    </div>
+    </span>
+
+
+const Resource2 = props =>
+    <span 
+        href='/'
+        className='resource'
+    >
+        <div className='resource-content'>
+            <div className='resource-title'>
+                Resource number two title
+            </div>
+            <div className='resource-description'>
+                Resource link about the topic of this workshop.
+                Resource link about the topic of this workshop.
+                Resource link about the topic of this workshop.
+            </div>
+        </div>
+    </span>
+
+
+const Resource1 = props =>
+    <span 
+        href='/'
+        className='resource'
+    >
+        <div className='resource-content'>
+            <div className='resource-title'>
+                Resource link about the topic of this workshop.
+            </div>
+        </div>
+    </span>
+
 
 
 const Guide = props =>
     <div className='workshop-guide'>
-        <Panel2 />
-        <Panel4 />
-        <Panel1 />
-        <Panel5 />
-        <Panel1 />
-        <Panel3 />
-        <Panel2 />
-        <Panel3 />
-        <Panel4 />
-        <Panel5 />
+        <Resource4 />
+        <Resource1 />
+        <Resource2 />
+        <Resource3 />
+        <Resource2 />
+        <Resource2 />
+        <Resource3 />
+        <Resource4 />
+        <Resource2 />
+        <Resource2 />
+        <Resource3 />
+        <Resource4 />
+        <Resource4 />
+        <Resource3 />
+        <Resource2 />
+        <Resource2 />
+        <Resource3 />
+        <Resource4 />
+        <Resource2 />
+        <Resource3 />
+        <Resource4 />
+        <Resource2 />
+        <Resource3 />
     </div>
 
 

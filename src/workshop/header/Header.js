@@ -1,22 +1,23 @@
 import React, { PropTypes } from 'react'
-import Content from './content'
-import Calendar from './calendar'
+import Navbar from './navbar'
 
 
-const HeaderDegrade = props =>
-    <div className='workshop-header-degrade'>
-        <Content {...props} />
-        <Calendar {...props} />
+const Title = ({workshop}) =>
+    <div className='workshop-header-content'>
+        <div className='workshop-header-title'>
+            {workshop.name}
+        </div>
     </div>
 
 
 const Header = props =>
-    <div className='workshop-header'>
-        <div 
-            className='workshop-header-image'
-            style={{'backgroundImage': 'url(/images/' + props.workshop.image + '.jpg)'}}
-        >
-            <HeaderDegrade {...props } />
+    <div 
+        className='workshop-header'
+        style={{'backgroundImage': 'url(/images/' + props.workshop.image + '.jpg)'}}
+    >
+        <div className='workshop-header-degrade'>
+            <Title {...props} />
+            <Navbar {...props} />
         </div>
     </div>
 

@@ -1,0 +1,15 @@
+.participations {
+    transition: height 0.2s ease;
+    transition: padding 0.2s ease;
+    overflow: hidden;
+}
+
+.participations-hidden {
+    padding: 0;
+    height: 0;
+}
+
+.participations-visible {
+    padding: 1em 0;
+    min-height: 5em;
+}

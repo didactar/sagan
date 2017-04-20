@@ -10,7 +10,13 @@ class WorkshopContainer extends Component {
     static propTypes = {
         workshop: PropTypes.object.isRequired,
         fetching: PropTypes.bool.isRequired,
-        activeTab: PropTypes.string.isRequired,
+        subheaderContent: PropTypes.string,
+        showCalendar: PropTypes.func.isRequired,
+        showCommunity: PropTypes.func.isRequired,
+        showResourcesFilter: PropTypes.func.isRequired,
+        showPublish: PropTypes.func.isRequired,
+        showSubscribe: PropTypes.func.isRequired,
+        hideSubheader: PropTypes.func.isRequired,
     }
 
 
@@ -26,6 +32,6 @@ class WorkshopContainer extends Component {
 
 
 export default connect(
-    state => state.workshop.workshop, 
+    state => state.workshop, 
     actions
 )(WorkshopContainer)

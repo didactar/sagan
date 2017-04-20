@@ -1,19 +1,24 @@
-import { combineReducers } from 'redux'
-//import { calendar as calendarReducer } from './header/calendar'
-import { reducer as relatedReducer } from './related'
-
-
-import { REQUEST_WORKSHOP, RECEIVE_WORKSHOP } from './actions'
+import { 
+    REQUEST_WORKSHOP, 
+    RECEIVE_WORKSHOP,
+    SHOW_CALENDAR, 
+    SHOW_COMMUNITY, 
+    SHOW_RESOURCES_FILTER, 
+    SHOW_PUBLISH, 
+    SHOW_SUBSCRIBE,
+    HIDE_SUBHEADER,
+} from './actions'
 
 
 const defaultState = {
     activeTab: 'guide',
     fetching: true, 
     workshop: {},
+    subheaderContent: 'calendar',
 }
 
 
-const workshop = (state = defaultState, action) => {
+export default (state = defaultState, action) => {
 
   switch (action.type) {
 
@@ -30,16 +35,45 @@ const workshop = (state = defaultState, action) => {
         workshop: action.workshop
       }
 
+    case SHOW_CALENDAR:
+      return {
+        ...state,
+        subheaderContent: 'calendar'
+      }
+
+    case SHOW_COMMUNITY:
+      return {
+        ...state,
+        subheaderContent: 'community'
+      }
+
+    case SHOW_PUBLISH:
+      return {
+        ...state,
+        subheaderContent: 'publish'
+      }
+
+    case SHOW_SUBSCRIBE:
+      return {
+        ...state,
+        subheaderContent: 'subscribe'
+      }
+
+    case SHOW_RESOURCES_FILTER:
+      return {
+        ...state,
+        subheaderContent: 'resources'
+      }
+
+    case HIDE_SUBHEADER:
+      return {
+        ...state,
+        subheaderContent: null
+      }
+
     default:
       return state
 
   }
 
 }
-
-
-export default combineReducers({
-    workshop, 
-    //calendar: calendarReducer,
-    related: relatedReducer,
-})
