@@ -105,7 +105,9 @@ const users = [
 
 
 const Community = props =>
-    <Users users={users} />
+    <div className='workshop-community'>
+        <Users users={users} />
+    </div>
 
 
 export default Community

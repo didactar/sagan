@@ -1,0 +1,58 @@
+@import '../../../../mixins.scss';
+
+.event-content {
+    background: #fff;
+    border-bottom: 1px solid #ddd;
+    padding: 1em 0;
+}
+
+.event-content-inner-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include main-column();
+}
+
+.event-date {
+    display: flex;
+    align-items: center;
+    cursor: pointer
+}
+
+.event-content-data:hover {
+    opacity: 0.8;
+}
+
+.event-date-day {
+    font-size: 4.2em;
+    margin-right: 0.3em;
+}
+
+.event-date-month {
+    margin: 0.3em 0;
+    font-size: 1.1em;
+}
+
+.event-date-time {
+    margin: 0.3em 0;
+    font-size: 1.3em;
+}
+
+.event-participate {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.event-participate:hover {
+    opacity: 0.8;
+}
+
+.event-participate-icon {
+    font-size: 1.8em;
+}
+
+.event-participate-count {
+    margin: 0 0.7em 0 0;
+    font-size: 1.2em;
+}

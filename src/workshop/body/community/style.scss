@@ -1,0 +1,5 @@
+@import '../../../mixins.scss';
+
+.workshop-community {
+    @include main-column-wide();
+}
