@@ -1,28 +1,17 @@
-import React, { PropTypes } from 'react'
+import React from 'react'
 import { Topbar } from '../shared'
-import Login from './Login'
-import Personal from './Personal'
+import Header from './header'
+import Workshops from './workshops'
 
 
 const Profile = props =>
-    props.loggedIn 
-        ? <Personal {...props} />
-        : <Login {...props} />
-
-
-const ProfileWrapper = props =>
     <div>
         <Topbar theme='light' /> 
         <div className='profile'>
-            <Profile {...props} />
+            <Header {...props} />
+            <Workshops {...props} />
         </div>
     </div>
 
 
-ProfileWrapper.propTypes = {
-    loggedIn: PropTypes.bool.isRequired,
-    logIn: PropTypes.func.isRequired,
-}
-
-
-export default ProfileWrapper
+export default Profile

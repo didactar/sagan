@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux'
 import { reducer as homeReducer } from './home'
 import { reducer as workshopReducer } from './workshop'
-import { reducer as profileReducer } from './profile'
+import { reducer as profileReducer } from './profile/workshops'
 import { topbarReducer } from './shared'
 
 

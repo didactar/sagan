@@ -1,6 +1,7 @@
 @import '../mixins.scss';
+@import './workshops/style.scss';
+@import './header/style.scss';
 
 .profile {
-    @include main-column(); 
     @include topbar-spacing(); 
 }
