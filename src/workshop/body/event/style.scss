@@ -1,15 +1,9 @@
 @import './participations/style.scss';
+@import '../../../mixins.scss';
 
-.event {
-    color: #333;
-    background: transparent;
-    transition: background 0.2s ease;
-    padding: 0 0.5em 1em;
-    border-bottom: 1px solid #ddd;
-    margin: 0 0 1em;
-}
-
-.event-expanded {
+.workshop-event {
+    @include main-column();
+    padding: 2em 0;
 }
 
 .event-content {

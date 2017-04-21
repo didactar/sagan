@@ -2,7 +2,7 @@ import React, { PropTypes } from 'react'
 import Topbar from '../shared/topbar'
 import Header from './header'
 import Subheader from './subheader'
-import Guide from './guide'
+import Body from './body'
 
      
 const Workshop = props =>
@@ -10,7 +10,7 @@ const Workshop = props =>
         <Topbar theme='dark' />
         <Header {...props} />
         <Subheader {...props} />
-        <Guide {...props} />
+        <Body {...props} />
     </div>
 
 

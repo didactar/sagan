@@ -6,24 +6,24 @@ import Publish from './publish'
 import Subscribe from './subscribe'
 
 
-const Content = ({subheaderContent}) => {
+const Content = props => {
 
-    switch (subheaderContent) {
+    switch (props.subheaderContent) {
 
         case 'community':
-            return <Community />
+            return <Community {...props} />
 
         case 'calendar':
-            return <Calendar />
+            return <Calendar {...props} />
 
         case 'resources':
-            return <Resources />
+            return <Resources {...props} />
 
         case 'publish':
-            return <Publish />
+            return <Publish {...props} />
 
         case 'subscribe':
-            return <Subscribe />
+            return <Subscribe {...props} />
 
         default:
             return null

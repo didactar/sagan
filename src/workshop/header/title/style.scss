@@ -1,16 +1,20 @@
-@import '../../../mixins.scss';
-
 .workshop-header-content {
     @include main-column();
     display: flex;
     align-items: center;
-    padding: 20em 1.3em 5em;
+    padding: 20em 1.3em 3em;
     text-align: center;
 }
+
 
 .workshop-header-title {
     font-size: 3em;
     color: #fff;
     text-align: center;
     width: 100%;
+    cursor: pointer;
+}
+
+.workshop-header-title:hover {
+    opacity: 0.8;
 }

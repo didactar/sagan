@@ -7,6 +7,9 @@ import {
     SHOW_PUBLISH, 
     SHOW_SUBSCRIBE,
     HIDE_SUBHEADER,
+    SHOW_COMMUNITY_USERS,
+    SHOW_RESOURCES,
+    SHOW_EVENT,
 } from './actions'
 
 
@@ -15,6 +18,7 @@ const defaultState = {
     fetching: true, 
     workshop: {},
     subheaderContent: 'calendar',
+    bodyContent: 'resources',
 }
 
 
@@ -69,6 +73,24 @@ export default (state = defaultState, action) => {
       return {
         ...state,
         subheaderContent: null
+      }
+
+    case SHOW_RESOURCES:
+      return {
+        ...state,
+        bodyContent: 'resources'
+      }
+
+    case SHOW_COMMUNITY_USERS:
+      return {
+        ...state,
+        bodyContent: 'community'
+      }
+
+    case SHOW_EVENT:
+      return {
+        ...state,
+        bodyContent: 'event'
       }
 
     default:

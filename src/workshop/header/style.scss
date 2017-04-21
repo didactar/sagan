@@ -1,4 +1,5 @@
 @import './navbar/style';
+@import './title/style';
 
 .workshop-header-image {
     background-size: cover;
@@ -15,19 +16,4 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-}
-
-.workshop-header-content {
-    @include main-column();
-    display: flex;
-    align-items: center;
-    padding: 20em 1.3em 3em;
-    text-align: center;
-}
-
-.workshop-header-title {
-    font-size: 3em;
-    color: #fff;
-    text-align: center;
-    width: 100%;
 }

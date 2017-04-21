@@ -1,4 +1,4 @@
-import React, { PropTypes } from 'react'
+import React from 'react'
 import Participations from './participations'
 
 
@@ -66,20 +66,10 @@ const EventContent = ({event, expandEvent}) =>
 
 
 const Event = props =>
-    <div className={ 
-        props.event.slug === props.expandedEvent.slug 
-        ? 'event-expanded event' : 'event'}
-    >
+    <div className='workshop-event'>
         <EventContent {...props} />
         <Participations {...props} />
     </div>
 
-/*
-Event.propTypes = {
-    event: PropTypes.object.isRequired,
-    expandEvent: PropTypes.func.isRequired,
-    expandedEvent: PropTypes.object.isRequired,
-}
-*/
 
 export default Event

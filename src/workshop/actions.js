@@ -8,6 +8,24 @@ export const SHOW_RESOURCES_FILTER = 'SHOW_RESOURCES_FILTER'
 export const SHOW_PUBLISH = 'SHOW_PUBLISH'
 export const SHOW_SUBSCRIBE = 'SHOW_SUBSCRIBE'
 export const HIDE_SUBHEADER = 'HIDE_SUBHEADER'
+export const SHOW_COMMUNITY_USERS = 'SHOW_COMMUNITY_USERS'
+export const SHOW_RESOURCES = 'SHOW_RESOURCES'
+export const SHOW_EVENT = 'SHOW_EVENT'
+
+
+export const showEvent = () => ({
+    type: SHOW_EVENT
+})
+
+
+export const showResources = () => ({
+    type: SHOW_RESOURCES
+})
+
+
+export const showCommunityUsers = () => ({
+    type: SHOW_COMMUNITY_USERS
+})
 
 
 export const showResourcesFilter = () => ({

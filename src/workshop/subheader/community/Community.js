@@ -1,8 +1,11 @@
 import React  from 'react'
 
 
-const Tab = ({name, number}) =>
-    <div className='workshop-community-tab'>
+const Tab = ({name, number, onClick}) =>
+    <div 
+        className='workshop-community-tab'
+        onClick={onClick}
+    >
         <span className='workshop-community-tab-number'>
             {number}
         </span>
@@ -14,10 +17,26 @@ const Tab = ({name, number}) =>
 
 const Community = props =>
     <div className='workshop-community'>
-        <Tab name='community' number='202k' />
-        <Tab name='guides' number='151k' />
-        <Tab name='moderators' number='14' />
-        <Tab name='learners' number='121k' />
+        <Tab 
+            name='community' 
+            number='202k' 
+            onClick={props.showCommunityUsers} 
+        />
+        <Tab 
+            name='guides' 
+            number='151k' 
+            onClick={props.showCommunityUsers} 
+        />
+        <Tab 
+            name='moderators' 
+            number='14' 
+            onClick={props.showCommunityUsers} 
+        />
+        <Tab 
+            name='learners' 
+            number='121k' 
+            onClick={props.showCommunityUsers} 
+        />
     </div>
 
 

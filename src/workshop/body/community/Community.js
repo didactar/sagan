@@ -1,5 +1,6 @@
 import React  from 'react'
-import { Users, Spinner } from '../../shared'
+import { Users } from '../../../shared'
+
 
 const users = [
     {user: {
@@ -103,39 +104,8 @@ const users = [
 ]
 
 
-const UserList = ({fetching}) =>
-    fetching
-        ? <Spinner />
-        : <Users users={users} />
-
-
-
-const CommunityTab = ({name, number}) =>
-    <div className='workshop-community-tab'>
-        <span className='workshop-community-tab-number'>
-            {number}
-        </span>
-        <span className='workshop-community-tab-name'>
-            {name}
-        </span>
-    </div>
-
-
-
-const CommunityTabs = props =>
-    <div className='workshop-community-tabs'>
-        <CommunityTab name='community' number='202k' />
-        <CommunityTab name='educators' number='151k' />
-        <CommunityTab name='moderators' number='14' />
-        <CommunityTab name='learners' number='121k' />
-    </div>
-
-
 const Community = props =>
-    <div className='workshop-community'>
-        <CommunityTabs {...props} />
-        <UserList fetching={false} />
-    </div>
+    <Users users={users} />
 
 
 export default Community

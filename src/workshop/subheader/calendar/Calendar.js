@@ -1,8 +1,11 @@
 import React  from 'react'
 
 
-const CalendarDate = ({event}) =>
-    <div className='calendar-date'>
+const CalendarDate = ({event, onClick}) =>
+    <div 
+        className='calendar-date'
+        onClick={onClick}   
+    >
         <div className='calendar-date-day'>
             20
         </div>
@@ -19,21 +22,14 @@ const CalendarDate = ({event}) =>
 
 const Calendar = props => 
     <div className='calendar'>
-        <CalendarDate />
-        <CalendarDate />
-        <CalendarDate />
-        <CalendarDate />
-        <CalendarDate />
-        <CalendarDate />
-        <CalendarDate />
+        <CalendarDate onClick={props.showEvent} />
+        <CalendarDate onClick={props.showEvent} />
+        <CalendarDate onClick={props.showEvent} />
+        <CalendarDate onClick={props.showEvent} />
+        <CalendarDate onClick={props.showEvent} />
+        <CalendarDate onClick={props.showEvent} />
+        <CalendarDate onClick={props.showEvent} />
     </div>
 
-/*
-Calendar.propTypes = {
-    events: PropTypes.array.isRequired,
-    expandEvent: PropTypes.func.isRequired,
-    expandedEvent: PropTypes.object.isRequired
-}
-*/
 
 export default Calendar

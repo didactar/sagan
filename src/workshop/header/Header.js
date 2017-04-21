@@ -1,13 +1,6 @@
 import React, { PropTypes } from 'react'
+import Title from './title'
 import Navbar from './navbar'
-
-
-const Title = ({workshop}) =>
-    <div className='workshop-header-content'>
-        <div className='workshop-header-title'>
-            {workshop.name}
-        </div>
-    </div>
 
 
 const Header = props =>
