@@ -1,7 +1,9 @@
-@import '../mixins.scss';
 @import './welcome/style.scss';
+@import './topics/style.scss';
+@import './workshops/style.scss';
+
 
 .home {
-    @include main-column-wide(); 
-    margin-top: 0.5em;
+    min-height: 100vh;
+    background: #f0f0f0;
 }

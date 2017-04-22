@@ -1,5 +1,7 @@
+@import '../../mixins.scss';
+
 .welcome {
-    height: 33em;
+    height: 40em;
     position: relative;
     text-align: center;
 }
@@ -13,10 +15,10 @@
 }
 
 .welcome-degrade {
-    background: -webkit-linear-gradient(top, transparent, rgba(3,3,3,0.6));
+    background: -webkit-linear-gradient(top, transparent, rgba(3,3,3,0.9));
     position: absolute;
     bottom: 0;
-    height: 15em;
+    height: 30em;
     width: 100%;
 }
 
@@ -41,7 +43,6 @@
 .welcome-learn-link {
     display: inline-block;
     margin: 3em auto 0;
-    border-radius: 10em;
     color: #fff;
     font-size: 1.2em;
     border: 2px solid #fff;    

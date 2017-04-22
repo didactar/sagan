@@ -1,20 +1,14 @@
 import React from 'react'
-import { Topbar, Workshops } from '../shared'
+import { Topbar } from '../shared'
 import Welcome from './welcome'
-
-
-const Home = ({items, fetching}) =>
-    <div className='home'>
-        <Workshops 
-            workshops={items} 
-            fetching={fetching} 
-        />
-    </div>
+import Topics from './topics'
+import Workshops from './workshops'
 
 
 export default ({items, fetching}) =>
-    <div>
+    <div className='home'>
         <Topbar theme='dark' /> 
         <Welcome />
-        <Home items={items} fetching={fetching} />
+        <Topics />
+        <Workshops />
     </div>

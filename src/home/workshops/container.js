@@ -1,10 +1,10 @@
 import React, { Component, PropTypes } from 'react'
 import { connect } from 'react-redux'
 import * as actions from './actions'
-import Home from './Home'
+import Workshops from './Workshops'
 
 
-class HomeContainer extends Component {
+class WorkshopsContainer extends Component {
 
     static propTypes = {
         items: PropTypes.array.isRequired,
@@ -15,7 +15,7 @@ class HomeContainer extends Component {
         this.props.fetchWorkshopsIfNeeded()
 
     render = () => 
-        <Home 
+        <Workshops 
             items={this.props.items} 
             fetching={this.props.fetching} 
         />
@@ -23,4 +23,4 @@ class HomeContainer extends Component {
 }
 
 
-export default connect(state => state.home, actions)(HomeContainer)
+export default connect(state => state.home, actions)(WorkshopsContainer)

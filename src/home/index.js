@@ -1,7 +1,5 @@
-import Home from './container'
-import reducer from './reducers'
+import Home from './Home'
+import { reducer } from './workshops'
 
 export { reducer }
-
-
 export default Home

@@ -1,0 +1,20 @@
+@import '../../mixins.scss';
+
+.home-topics {
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid #ddd;
+    background: #fff;
+}
+
+.home-topics-tab {
+    padding: 1.3em 2.5em;
+    cursor: pointer;
+    color: #333;
+    font-size: 1.1em;
+    text-transform: capitalize;
+}
+
+.home-topics-tab:hover {
+    color: #000;
+}

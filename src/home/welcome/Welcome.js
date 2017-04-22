@@ -12,7 +12,7 @@ const LearnMore = () =>
 
 const WelcomeMessage = () =>
     <div className='welcome-learn-message'>
-        Join an amazing community of lifelong learners at museums, libraries and public spaces.
+        "Education is for improving the lives of others and for leaving your community and world better than you found it". Marian Wright Edelman
     </div>
 
 
