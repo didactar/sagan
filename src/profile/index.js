@@ -1,5 +1,5 @@
 import Profile from './container'
-import reducer from './reducers'
+import { reducer } from './workshops'
 
 export { reducer }
 export default Profile

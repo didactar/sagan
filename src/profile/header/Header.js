@@ -27,6 +27,8 @@ const Picture = props =>
 
 export default props =>
     <div className='profile-header'>
-        <Picture />
-        <Text />
+        <div className='profile-header-inner-wrapper'>
+            <Picture />
+            <Text />
+        </div>
     </div>

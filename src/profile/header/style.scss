@@ -1,9 +1,14 @@
 @import '../../mixins.scss';
 
 .profile-header {
+    background: #fff;
+    border-bottom: 1px solid #ddd;
+    padding: 0 0 3em;
+}
+
+.profile-header-inner-wrapper {
     @include main-column(); 
     display: flex;
-    margin-bottom: 4em;
 }
 
 .profile-picture {
@@ -16,7 +21,7 @@
 }
 
 .profile-username {
-    font-size: 2.3em;
+    font-size: 2em;
     margin-bottom: 0.5em;
 }
 
