@@ -44,6 +44,16 @@
 }
 
 .topbar-bar-brand-icon {
-    display: inline-block;
     margin-right: 0.5em;
+    background: url('/images/logo.png');
+    background-size: cover;
+    background-position: 50% 50%;
+    width: 1.4em;
+    height: 1.4em;
+    opacity: 0.8;
+}
+
+.topbar-bar-brand {
+    display: flex;
+    align-items: center;
 }

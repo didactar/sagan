@@ -9,7 +9,8 @@ const MenuButton = ({showMenu}) =>
 
 const BrandButton = () =>
     <a href='/' className='topbar-bar-brand'>
-        <i className='topbar-bar-brand-icon fa fa-home'></i>
+        <span className='topbar-bar-brand-icon'> 
+        </span>
         <span className='topbar-bar-brand-label'>
             didactar
         </span>
