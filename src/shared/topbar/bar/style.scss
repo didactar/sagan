@@ -10,10 +10,16 @@
 
 .topbar-bar-light {
     background: #fff;
-    color: #555;
+    color: #444;
     .topbar-bar-menu, 
     .topbar-bar-brand {
-        color: #555;
+        color: #444;
+    }
+    .topbar-bar-brand-logo {
+        background: url('/images/logo_dark.png');
+        background-size: cover;
+        background-position: 50% 50%;
+        opacity: 0.7;
     }
 }
 
@@ -24,6 +30,11 @@
     .topbar-bar-menu, 
     .topbar-bar-brand {
         color: #fff;
+    }
+    .topbar-bar-brand-logo {
+        background: url('/images/logo_light.png');
+        background-size: cover;
+        background-position: 50% 50%;
     }
 }
 
@@ -43,11 +54,8 @@
     font-size: 0.9em;
 }
 
-.topbar-bar-brand-icon {
+.topbar-bar-brand-logo {
     margin-right: 0.5em;
-    background: url('/images/logo.png');
-    background-size: cover;
-    background-position: 50% 50%;
     width: 1.4em;
     height: 1.4em;
     opacity: 0.8;
