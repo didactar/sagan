@@ -1,5 +1,6 @@
 import React, { Component, PropTypes } from 'react'
 import { connect } from 'react-redux'
+import { Loading } from '../../shared'
 import * as actions from './actions'
 import Workshops from './Workshops'
 
@@ -7,23 +8,23 @@ import Workshops from './Workshops'
 class WorkshopContainer extends Component {
 
     static propTypes = {
-        items: PropTypes.array.isRequired,
+        workshops: PropTypes.array.isRequired,
         fetching: PropTypes.bool.isRequired
     }
 
     componentDidMount = () => 
         this.props.fetchWorkshopsIfNeeded()
 
-    render = () => 
-        <Workshops
-            items={this.props.items} 
-            fetching={this.props.fetching} 
-        />
+    render = () =>
+        this.props.fetching
+            ? <Loading />
+            : <Workshops workshops={this.props.workshops} />
+
 
 }
 
 
 export default connect(
-    state => state.profile, 
+    state => state.user.workshops, 
     actions
 )(WorkshopContainer)

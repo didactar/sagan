@@ -4,14 +4,11 @@ import Header from './header'
 import Workshops from './workshops'
 
 
-const Profile = props =>
+export default props =>
     <div>
         <Topbar theme='light' /> 
-        <div className='profile'>
+        <div className='user'>
             <Header {...props} />
             <Workshops {...props} />
         </div>
     </div>
-
-
-export default Profile

@@ -2,13 +2,16 @@ import React from 'react'
 
 
 const UserItem = ({user}) =>
-    <div className='user-item'>
+    <a 
+        className='user-item'
+        href={'/user/' + user.username}
+    >
         <div className='user-item-picture'>
         </div>
         <div className='user-item-name'>
             {user.name}
         </div>
-    </div>
+    </a>
 
 
 export default ({users}) =>

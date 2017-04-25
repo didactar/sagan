@@ -15,7 +15,7 @@ export const requestWorkshops = () => ({
 
 export const receiveWorkshops = json => ({
     type: RECEIVE_WORKSHOPS,
-    items: json.data
+    workshops: json.data
 })
 
 

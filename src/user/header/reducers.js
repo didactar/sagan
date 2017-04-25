@@ -1,9 +1,12 @@
-import { LOGIN, LOGOUT } from './actions'
+import { 
+    REQUEST_USER, 
+    RECEIVE_USER,
+} from './actions'
 
 
 const defaultState = {
-    loggedIn: false, 
-    user: {}
+    user: {},
+    fetching: true,
 }
 
 
@@ -11,18 +14,17 @@ export default (state = defaultState, action) => {
 
   switch (action.type) {
 
-    case LOGIN:
-        console.log('login!!!!!')
+    case REQUEST_USER:
       return {
         ...state,
-        loggedIn: true
+        fetching: true,
       }
 
-    case LOGOUT:
-        console.log('logout!!!!!')
+    case RECEIVE_USER:
       return {
         ...state,
-        loggedIn: false
+        fetching: false,
+        user: action.user
       }
 
     default:

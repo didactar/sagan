@@ -19,7 +19,6 @@ class WorkshopContainer extends Component {
         hideSubheader: PropTypes.func.isRequired,
     }
 
-
     componentDidMount = () =>
         this.props.fetchWorkshop(this.props.params.workshop)
 

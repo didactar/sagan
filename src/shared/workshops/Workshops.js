@@ -1,5 +1,4 @@
 import React, {PropTypes} from 'react'
-import { Spinner } from '../../shared'
 
 
 const Workshop = ({workshop}) =>
@@ -24,16 +23,9 @@ const Workshops = ({workshops}) =>
     </div>
 
 
-const WorkshopsWrapper = ({workshops, fetching}) =>
-    fetching 
-        ? <Spinner />
-        : <Workshops workshops={workshops} />
-
-
-WorkshopsWrapper.propTypes = {
+Workshops.propTypes = {
     workshops: PropTypes.array.isRequired,
-    fetching: PropTypes.bool.isRequired
 }
 
 
-export default WorkshopsWrapper
+export default Workshops

@@ -26,7 +26,7 @@ const Password = () =>
 
 
 const LogIn = ({logIn}) =>
-    <div className='profile-login'>
+    <div className='user-login'>
         <form>
             <div className='form-section'>
                 <Username />

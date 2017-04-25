@@ -35,7 +35,7 @@ const MenuContent = ({loggedIn, logOut}) =>
         <MenuTab 
             label='profile'
             icon='fa-user'
-            link='/profile'
+            link='/user/hank-green'
         />
         <MenuTab 
             label='settings'
