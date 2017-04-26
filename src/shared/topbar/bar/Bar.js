@@ -2,25 +2,28 @@ import React, { PropTypes } from 'react'
 
 
 const MenuButton = ({showMenu}) =>
-    <span onClick={showMenu} > 
-        <i className='topbar-bar-menu fa fa-bars'></i>
-    </span>
+    <i 
+        className='topbar-bar-menu fa fa-bars'
+        onClick={showMenu} 
+    ></i>
 
 
-const BrandButton = () =>
-    <a href='/' className='topbar-bar-brand'>
-        <span className='topbar-bar-brand-logo'> 
-        </span>
-        <span className='topbar-bar-brand-label'>
-            didactar
-        </span>
+const LogoButton = () =>
+    <a href='/' className='topbar-bar-logo'>
     </a>
+
+
+const Brand = () =>
+    <span className='topbar-bar-brand'>
+        didactar
+    </span>
 
 
 const Bar = ({theme, showMenu}) =>
     <div className={ theme === 'dark' ? 'topbar-bar-dark' : 'topbar-bar-light' } >
         <div className='topbar-bar'>
-            <BrandButton />
+            <LogoButton />
+            <Brand />
             <MenuButton showMenu={showMenu} />
         </div>
     </div>
