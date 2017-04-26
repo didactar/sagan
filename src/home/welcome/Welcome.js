@@ -27,7 +27,7 @@ export default () =>
     <div className='welcome'>
         <div 
             className='welcome-image'
-            style={{'backgroundImage': 'url(/images/didactar_01.jpg)'}}
+            style={{'backgroundImage': 'url(/images/home/didactar_01.jpg)'}}
         >
             <div className='welcome-degrade'>
                 <div className='welcome-content'>

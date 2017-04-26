@@ -1,13 +1,13 @@
 .workshops {
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     justify-content: center;
 }
 
 .workshop-item {
     cursor: pointer;
-    height: 23em;
-    width: 23em;
+    height: 22em;
+    width: 22em;
     margin: 0.5em;
     background-size: cover;
     background-position: 50% 50%;

@@ -5,7 +5,7 @@ const Workshop = ({workshop}) =>
     <a
         className='workshop-item'
         href={'/workshop/' + workshop.slug }
-        style={{'backgroundImage': 'url(/images/' + workshop.image + '.jpg)'}}
+        style={{'backgroundImage': 'url(/images/workshops/' + workshop.image + '.jpg)'}}
     >
         <div className='workshop-item-degrade'>
             <div className='workshop-item-name'>

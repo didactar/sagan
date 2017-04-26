@@ -6,7 +6,7 @@ import Navbar from './navbar'
 const Header = props =>
     <div 
         className='workshop-header'
-        style={{'backgroundImage': 'url(/images/' + props.workshop.image + '.jpg)'}}
+        style={{'backgroundImage': 'url(/images/workshops/' + props.workshop.image + '.jpg)'}}
     >
         <div className='workshop-header-degrade'>
             <Title {...props} />
