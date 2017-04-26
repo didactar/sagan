@@ -1,27 +1,27 @@
-import {BASE_URL} from '../../../../../constants'
+import {BASE_URL} from '../../../constants'
 
-export const REQUEST_COMMUNITY = 'REQUEST_COMMUNITY'
-export const RECEIVE_COMMUNITY = 'RECEIVE_COMMUNITY'
+export const REQUEST_USERS = 'REQUEST_USERS'
+export const RECEIVE_USERS = 'RECEIVE_USERS'
 
 
-const workshopCommunity = (workshopSlug) =>
+const workshopUsers = (workshopSlug) =>
     BASE_URL + 'users'
 
 
-export const requestCommunity = () => ({
-    type: REQUEST_COMMUNITY
+export const requestUsers = () => ({
+    type: REQUEST_USERS
 })
 
 
-export const receiveCommunity = json => ({
-    type: RECEIVE_COMMUNITY,
-    participations: json
+export const receiveUsers = json => ({
+    type: RECEIVE_USERS,
+    users: json
 })
 
 
-export const fetchCommunity = workshopSlug => dispatch => {
-    dispatch(requestCommunity())
-    return fetch(workshopCommunity(workshopSlug))
+export const fetchUsers = workshopSlug => dispatch => {
+    dispatch(requestUsers())
+    return fetch(workshopUsers(workshopSlug))
         .then(response => response.json())
-        .then(json => dispatch(receiveCommunity(json)))
+        .then(json => dispatch(receiveUsers(json)))
 }

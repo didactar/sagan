@@ -6,7 +6,10 @@ const UserItem = ({user}) =>
         className='user-item'
         href={'/user/' + user.username}
     >
-        <div className='user-item-picture'>
+        <div 
+            className='user-item-picture'
+            style={{'backgroundImage': 'url(/images/avatars/' + user.avatar + '.jpg)'}}
+        >
         </div>
         <div className='user-item-name'>
             {user.name}
@@ -17,9 +20,6 @@ const UserItem = ({user}) =>
 export default ({users}) =>
     <div className='users'>
         {users.map((user, i) =>
-            <UserItem
-                key={i} 
-                user={user.user} 
-            />
+            <UserItem key={i} user={user} />
         )}
     </div>

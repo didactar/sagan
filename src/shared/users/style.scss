@@ -23,7 +23,8 @@
 }
 
 .user-item-picture {
-    background: #666;
+    background-size: cover;
+    background-position: 50% 50%;
     width: 6.5em;
     height: 6.5em;
     margin-bottom: 0.8em;

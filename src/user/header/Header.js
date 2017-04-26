@@ -13,7 +13,10 @@ const Text = ({user}) =>
 
 
 const Picture = ({user}) =>
-    <div className='user-picture'>
+    <div 
+        className='user-picture'
+        style={{'backgroundImage': 'url(/images/avatars/' + user.avatar + '.jpg)'}}
+    >
     </div>
 
 

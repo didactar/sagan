@@ -15,9 +15,10 @@
     border-radius: 20em;
     width: 10em;
     height: 10em;
-    background: #666;
     margin-right: 2em;
     flex-shrink: 0;
+    background-size: cover;
+    background-position: 50% 50%;
 }
 
 .user-username {
@@ -26,5 +27,6 @@
 }
 
 .user-about {
-    font-size: 1.1em;
+    font-size: 1em;
+    color: #555;
 }

@@ -1,3 +1,5 @@
-import Community from './Community'
+import Community from './container'
+import reducer from './reducers'
 
+export { reducer }
 export default Community
