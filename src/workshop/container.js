@@ -10,14 +10,9 @@ class WorkshopContainer extends Component {
     static propTypes = {
         workshop: PropTypes.object.isRequired,
         fetching: PropTypes.bool.isRequired,
-        subheaderContent: PropTypes.string,
         showHome: PropTypes.func.isRequired,
-        showCalendar: PropTypes.func.isRequired,
         showCommunity: PropTypes.func.isRequired,
-        showResourcesFilter: PropTypes.func.isRequired,
-        showPublish: PropTypes.func.isRequired,
-        showSubscribe: PropTypes.func.isRequired,
-        hideSubheader: PropTypes.func.isRequired,
+        showResources: PropTypes.func.isRequired,
     }
 
     componentDidMount = () =>

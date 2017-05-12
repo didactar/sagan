@@ -4,7 +4,6 @@ import Header from './header'
 import Guide from './guide'
 import Community from './community'
 import Event from './event'
-import Calendar from './calendar'
 import Related from './related'
 
 
@@ -12,7 +11,6 @@ const Home = props =>
     <div>
         <Guide {...props} />
         <Community {...props} />
-        <Calendar {...props} />
     </div>
 
 

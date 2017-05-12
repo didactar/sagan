@@ -3,7 +3,6 @@
 @import './community/style.scss';
 @import './event/style.scss';
 @import './home/style.scss';
-@import './calendar/style.scss';
 @import './related/style.scss';
 
 
@@ -13,7 +12,6 @@
     padding-bottom: 24em;
 }
 
-
 .workshop-content {
     background: #f0f0f0;
     z-index: 3;
@@ -21,13 +19,13 @@
 }
 
 .navbar {
-    border-top: 1px solid #ddd;
-    border-bottom: 1px solid #ddd;
     background: #fff;
     display: flex;
     align-items: center;
     align-content: center;
     justify-content: center;
+    border-bottom: 1px solid #ddd;
+    border-top: 1px solid #ddd;
 }
 
 .navbar-tab {
