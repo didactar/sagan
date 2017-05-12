@@ -28,12 +28,12 @@ const Navbar = props =>
             onClick={props.showCommunity} 
         />
         <Tab 
-            name='moderators' 
+            name='assistants' 
             number='14' 
             onClick={props.showCommunity} 
         />
         <Tab 
-            name='learners' 
+            name='members' 
             number='121k' 
             onClick={props.showCommunity} 
         />

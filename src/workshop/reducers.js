@@ -1,18 +1,16 @@
 import { 
     REQUEST_WORKSHOP, 
     RECEIVE_WORKSHOP,
-    SHOW_COMMUNITY, 
     SHOW_RESOURCES,
-    SHOW_EVENT,
-    SHOW_HOME,
+    SHOW_COMMUNITY, 
+    SHOW_CALENDAR,
 } from './actions'
 
 
 const defaultState = {
-    activeTab: 'guide',
     fetching: true, 
     workshop: {},
-    bodyContent: 'home',
+    bodyContent: 'resources',
 }
 
 
@@ -33,12 +31,6 @@ export default (state = defaultState, action) => {
         workshop: action.workshop
       }
 
-    case SHOW_HOME:
-      return {
-        ...state,
-        bodyContent: 'home'
-      }
-
     case SHOW_RESOURCES:
       return {
         ...state,
@@ -51,10 +43,10 @@ export default (state = defaultState, action) => {
         bodyContent: 'community'
       }
 
-    case SHOW_EVENT:
+    case SHOW_CALENDAR:
       return {
         ...state,
-        bodyContent: 'event'
+        bodyContent: 'calendar'
       }
 
     default:

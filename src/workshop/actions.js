@@ -2,20 +2,10 @@ import {BASE_URL} from '../constants'
 
 export const REQUEST_WORKSHOP = 'REQUEST_WORKSHOP'
 export const RECEIVE_WORKSHOP = 'RECEIVE_WORKSHOP'
-export const SHOW_HOME = 'SHOW_HOME'
 export const SHOW_COMMUNITY = 'SHOW_COMMUNITY'
 export const SHOW_RESOURCES = 'SHOW_RESOURCES'
-export const SHOW_EVENT = 'SHOW_EVENT'
+export const SHOW_CALENDAR = 'SHOW_CALENDAR'
 
-
-export const showHome = () => ({
-    type: SHOW_HOME
-})
-
-
-export const showEvent = () => ({
-    type: SHOW_EVENT
-})
 
 
 export const showResources = () => ({
@@ -25,6 +15,11 @@ export const showResources = () => ({
 
 export const showCommunity = () => ({
     type: SHOW_COMMUNITY
+})
+
+
+export const showCalendar = () => ({
+    type: SHOW_CALENDAR
 })
 
 

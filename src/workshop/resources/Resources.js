@@ -76,10 +76,10 @@ const Resource1 = props =>
 
 
 
-const Guide = props =>
+const Resources = props =>
     <div>
         <Navbar {...props } />
-        <div className='workshop-guide'>
+        <div className='workshop-resources'>
             <Resource1 />
             <Resource2 />
             <Resource3 />
@@ -107,4 +107,4 @@ const Guide = props =>
     </div>
 
 
-export default Guide
+export default Resources

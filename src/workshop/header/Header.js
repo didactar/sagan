@@ -1,10 +1,11 @@
 import React, { PropTypes } from 'react'
+import Navbar from './navbar'
 
 
-const Title = ({workshop, showHome}) =>
+const Title = ({workshop, showResources}) =>
     <div 
         className='workshop-header-title'
-        onClick={showHome}
+        onClick={showResources}
     >
         <div className='workshop-header-title-text'>
             {workshop.name}
@@ -19,6 +20,7 @@ const Header = props =>
     >
         <div className='workshop-header-degrade'>
             <Title {...props} />
+            <Navbar {...props} />
         </div>
     </div>
 

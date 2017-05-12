@@ -1,34 +1,25 @@
 import React, { PropTypes } from 'react'
 import Topbar from '../shared/topbar'
 import Header from './header'
-import Guide from './guide'
+import Resources from './resources'
+import Calendar from './calendar'
 import Community from './community'
-import Event from './event'
 import Related from './related'
 
-
-const Home = props => 
-    <div>
-        <Guide {...props} />
-        <Community {...props} />
-    </div>
 
 
 const Body = props => {
 
     switch (props.bodyContent) {
 
-        case 'home':
-            return <Home {...props} />
-
         case 'resources':
-            return <Guide {...props} />
+            return <Resources {...props} />
 
         case 'community':
             return <Community {...props} />
 
-        case 'event':
-            return <Event {...props} />
+        case 'calendar':
+            return <Calendar {...props} />
 
         default:
             return null

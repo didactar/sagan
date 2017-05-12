@@ -20,7 +20,7 @@ const Brand = () =>
 
 
 const Bar = ({theme, showMenu}) =>
-    <div className={ theme === 'dark' ? 'topbar-bar-dark' : 'topbar-bar-light' } >
+    <div className={ theme === 'light' ? 'topbar-bar-light' : 'topbar-bar-dark' } >
         <div className='topbar-bar'>
             <LogoButton />
             <Brand />
