@@ -1,10 +1,52 @@
 @import './header/style.scss';
-@import './subheader/style.scss';
-@import './body/style.scss';
+@import './guide/style.scss';
+@import './community/style.scss';
+@import './event/style.scss';
+@import './home/style.scss';
+@import './calendar/style.scss';
+@import './related/style.scss';
 
 
 .workshop {
-    background: #f0f0f0;
+    background: #ccc;
     min-height: 100vh;
+    padding-bottom: 24em;
 }
 
+
+.workshop-content {
+    background: #f0f0f0;
+    z-index: 3;
+    position: relative;
+}
+
+.navbar {
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+.navbar-tab {
+    cursor: pointer;
+    padding: 1.2em 2em;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-tab-name {
+    color: #444;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1em;
+}
+
+.navbar-tab-number {
+    font-family: 'Montserrat', sans-serif;
+    color: #111;
+    margin-right: 0.7em;
+    font-size: 1.5em;
+}

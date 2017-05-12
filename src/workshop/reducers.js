@@ -1,15 +1,10 @@
 import { 
     REQUEST_WORKSHOP, 
     RECEIVE_WORKSHOP,
-    SHOW_CALENDAR, 
     SHOW_COMMUNITY, 
-    SHOW_RESOURCES_FILTER, 
-    SHOW_PUBLISH, 
-    SHOW_SUBSCRIBE,
-    HIDE_SUBHEADER,
-    SHOW_COMMUNITY_USERS,
     SHOW_RESOURCES,
     SHOW_EVENT,
+    SHOW_HOME,
 } from './actions'
 
 
@@ -17,8 +12,7 @@ const defaultState = {
     activeTab: 'guide',
     fetching: true, 
     workshop: {},
-    subheaderContent: 'calendar',
-    bodyContent: 'resources',
+    bodyContent: 'home',
 }
 
 
@@ -39,40 +33,10 @@ export default (state = defaultState, action) => {
         workshop: action.workshop
       }
 
-    case SHOW_CALENDAR:
+    case SHOW_HOME:
       return {
         ...state,
-        subheaderContent: 'calendar'
-      }
-
-    case SHOW_COMMUNITY:
-      return {
-        ...state,
-        subheaderContent: 'community'
-      }
-
-    case SHOW_PUBLISH:
-      return {
-        ...state,
-        subheaderContent: 'publish'
-      }
-
-    case SHOW_SUBSCRIBE:
-      return {
-        ...state,
-        subheaderContent: 'subscribe'
-      }
-
-    case SHOW_RESOURCES_FILTER:
-      return {
-        ...state,
-        subheaderContent: 'resources'
-      }
-
-    case HIDE_SUBHEADER:
-      return {
-        ...state,
-        subheaderContent: null
+        bodyContent: 'home'
       }
 
     case SHOW_RESOURCES:
@@ -81,7 +45,7 @@ export default (state = defaultState, action) => {
         bodyContent: 'resources'
       }
 
-    case SHOW_COMMUNITY_USERS:
+    case SHOW_COMMUNITY:
       return {
         ...state,
         bodyContent: 'community'

@@ -1,0 +1,10 @@
+@import '../../mixins.scss';
+
+
+.workshop-related {
+    margin: 0.5em 0;
+    position: fixed;
+    bottom: 0;
+    z-index: 0;
+    width: 100%;
+}

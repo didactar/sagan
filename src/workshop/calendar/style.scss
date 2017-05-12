@@ -1,0 +1,33 @@
+.calendar {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    color: #fff;
+    background: #555;
+}
+
+.calendar-date {
+    display: flex;
+    padding: 1.35em 2em;
+    cursor: pointer;
+    align-items: center;
+    transition: background 0.2s ease;
+}
+
+.calendar-date:hover {
+    background: #222;
+}
+
+.calendar-date-day {
+    font-size: 3.4em;
+    margin-right: 0.2em;
+}
+
+.calendar-date-month {
+    font-size: 1em;
+}
+
+.calendar-date-hour {
+    font-size: 1.2em;
+}
