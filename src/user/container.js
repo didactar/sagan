@@ -1,15 +1,18 @@
 import React, { PropTypes, Component } from 'react'
 import { connect } from 'react-redux'
-import { Loading } from '../../shared'
+import { Loading } from '../shared'
 import * as actions from './actions'
-import Header from './Header'
+import User from './User'
 
 
-class HeaderContainer extends Component {
+class UserContainer extends Component {
 
     static propTypes = {
         user: PropTypes.object.isRequired,
         fetching: PropTypes.bool.isRequired,
+        showWorkshops: PropTypes.func.isRequired,
+        showSessions: PropTypes.func.isRequired,
+        showAbout: PropTypes.func.isRequired,
     }
 
     componentDidMount = () =>
@@ -18,7 +21,7 @@ class HeaderContainer extends Component {
     render = () =>
         this.props.fetching
             ? <Loading />
-            : <Header {...this.props} />
+            : <User {...this.props} />
 
 
 }
@@ -27,4 +30,4 @@ class HeaderContainer extends Component {
 export default connect(
     state => state.user.user, 
     actions
-)(HeaderContainer)
+)(UserContainer)

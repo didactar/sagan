@@ -1,12 +1,12 @@
 import { 
-    REQUEST_USER, 
-    RECEIVE_USER,
+    REQUEST_USERS, 
+    RECEIVE_USERS 
 } from './actions'
 
 
 const defaultState = {
-    user: {},
-    fetching: true,
+    fetching: false, 
+    users: []
 }
 
 
@@ -14,17 +14,17 @@ export default (state = defaultState, action) => {
 
   switch (action.type) {
 
-    case REQUEST_USER:
+    case REQUEST_USERS:
       return {
         ...state,
-        fetching: true,
+        fetching: true
       }
 
-    case RECEIVE_USER:
+    case RECEIVE_USERS:
       return {
         ...state,
         fetching: false,
-        user: action.user
+        users: action.users.data
       }
 
     default:

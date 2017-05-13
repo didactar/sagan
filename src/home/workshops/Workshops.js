@@ -1,11 +1,19 @@
-import React from 'react'
+import React, { PropTypes } from 'react'
 import { Workshops } from '../../shared'
 
 
-export default ({items, fetching}) =>
+const HomeWorkshops = ({workshops, fetching}) =>
     <div className='home-workshops'>
         <Workshops 
-            workshops={items} 
+            workshops={workshops} 
             fetching={fetching} 
         />
     </div>
+
+
+HomeWorkshops.propTypes = {
+    workshops: PropTypes.array.isRequired
+}
+
+
+export default HomeWorkshops

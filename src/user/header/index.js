@@ -1,5 +1,3 @@
-import Header from './container'
-import reducer from './reducers'
+import Header from './Header'
 
-export { reducer }
 export default Header

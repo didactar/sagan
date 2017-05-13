@@ -3,7 +3,7 @@ import { REQUEST_WORKSHOPS, RECEIVE_WORKSHOPS } from './actions'
 
 const defaultState = {
     fetching: false, 
-    items: []
+    workshops: []
 }
 
 
@@ -21,7 +21,7 @@ export default (state = defaultState, action) => {
       return {
         ...state,
         fetching: false,
-        items: action.items
+        workshops: action.items
       }
 
     default:

@@ -10,7 +10,7 @@ import {
 const defaultState = {
     fetching: true, 
     workshop: {},
-    bodyContent: 'resources',
+    selectedTab: 'resources',
 }
 
 
@@ -34,19 +34,19 @@ export default (state = defaultState, action) => {
     case SHOW_RESOURCES:
       return {
         ...state,
-        bodyContent: 'resources'
+        selectedTab: 'resources'
       }
 
     case SHOW_COMMUNITY:
       return {
         ...state,
-        bodyContent: 'community'
+        selectedTab: 'community'
       }
 
     case SHOW_CALENDAR:
       return {
         ...state,
-        bodyContent: 'calendar'
+        selectedTab: 'calendar'
       }
 
     default:

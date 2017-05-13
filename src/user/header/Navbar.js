@@ -3,7 +3,7 @@ import React from 'react'
 
 const Tab = ({onClick, name, selectedTab}) =>
     <div 
-        className={ name === selectedTab ? 'workshop-navbar-tab-selected' : 'workshop-navbar-tab' }
+        className={ name === selectedTab ? 'user-navbar-tab-selected' : 'user-navbar-tab' }
         onClick={onClick}
     >
         {name}
@@ -11,10 +11,10 @@ const Tab = ({onClick, name, selectedTab}) =>
 
 
 const Navbar = props =>
-    <div className='workshop-navbar'>
+    <div className='user-navbar'>
         <Tab 
-            name='resources'
-            onClick={props.showResources} 
+            name='workshops'
+            onClick={props.showWorkshops} 
             selectedTab={props.selectedTab}
         />
         <Tab 
@@ -23,8 +23,8 @@ const Navbar = props =>
             selectedTab={props.selectedTab}
         />
         <Tab 
-            name='community'
-            onClick={props.showCommunity} 
+            name='about'
+            onClick={props.showAbout} 
             selectedTab={props.selectedTab}
         />
     </div>

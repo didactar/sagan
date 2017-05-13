@@ -21,7 +21,7 @@ export default (state = defaultState, action) => {
       return {
         ...state,
         fetching: false,
-        workshops: action.workshops
+        workshops: action.items
       }
 
     default:
@@ -30,4 +30,3 @@ export default (state = defaultState, action) => {
   }
 
 }
-

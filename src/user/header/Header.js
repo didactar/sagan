@@ -1,14 +1,10 @@
 import React, { PropTypes } from 'react'
+import Navbar from './Navbar'
 
 
-const Text = ({user}) =>
-    <div>
-        <div className='user-username'>
-            {user.name}
-        </div>
-        <div className='user-about'>
-            Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
-        </div>
+const Name = ({user}) =>
+    <div className='user-username'>
+        {user.name}
     </div>
 
 
@@ -20,11 +16,12 @@ const Picture = ({user}) =>
     </div>
 
 
-const UserHeader = ({user}) =>
+const UserHeader = props =>
     <div className='user-header'>
         <div className='user-header-inner-wrapper'>
-            <Picture user={user} />
-            <Text user={user} />
+            <Picture {...props} />
+            <Name {...props} />
+            <Navbar {...props} />
         </div>
     </div>
 

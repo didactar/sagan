@@ -7,7 +7,7 @@ import Workshops from './Workshops'
 class WorkshopsContainer extends Component {
 
     static propTypes = {
-        items: PropTypes.array.isRequired,
+        workshops: PropTypes.array.isRequired,
         fetching: PropTypes.bool.isRequired
     }
 
@@ -16,11 +16,13 @@ class WorkshopsContainer extends Component {
 
     render = () => 
         <Workshops 
-            items={this.props.items} 
+            workshops={this.props.workshops} 
             fetching={this.props.fetching} 
         />
 
 }
 
 
-export default connect(state => state.home, actions)(WorkshopsContainer)
+export default connect(
+    state => state.home, actions
+)(WorkshopsContainer)

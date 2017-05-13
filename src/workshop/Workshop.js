@@ -8,9 +8,9 @@ import Related from './related'
 
 
 
-const Body = props => {
+const Tab = props => {
 
-    switch (props.bodyContent) {
+    switch (props.selectedTab) {
 
         case 'resources':
             return <Resources {...props} />
@@ -34,7 +34,7 @@ const Content = props =>
     <div className='workshop-content'>
         <Topbar theme='dark' />
         <Header {...props} />
-        <Body {...props} />
+        <Tab {...props} />
     </div>
 
 

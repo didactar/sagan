@@ -1,6 +1,5 @@
 import React, { Component, PropTypes } from 'react'
 import { connect } from 'react-redux'
-import { Loading } from '../../shared'
 import * as actions from './actions'
 import Workshops from './Workshops'
 
@@ -16,9 +15,10 @@ class WorkshopContainer extends Component {
         this.props.fetchWorkshopsIfNeeded()
 
     render = () =>
-        this.props.fetching
-            ? <Loading />
-            : <Workshops workshops={this.props.workshops} />
+        <Workshops 
+            workshops={this.props.workshops} 
+            fetching={this.props.fetching}
+        />
 
 
 }

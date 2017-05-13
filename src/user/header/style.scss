@@ -1,32 +1,60 @@
 @import '../../mixins.scss';
 
 .user-header {
-    background: #fff;
-    border-bottom: 1px solid #ddd;
-    padding: 0 0 3em;
+    background: #444;
+    padding: 6em 0 0;
 }
 
 .user-header-inner-wrapper {
     @include main-column(); 
-    display: flex;
+    text-align: center;
 }
 
 .user-picture {
     border-radius: 20em;
-    width: 10em;
-    height: 10em;
-    margin-right: 2em;
-    flex-shrink: 0;
+    width: 9em;
+    height: 9em;
+    margin-bottom: 1em;
     background-size: cover;
     background-position: 50% 50%;
+    display: inline-block;
+    border: 2px solid #fff;
 }
 
 .user-username {
-    font-size: 2em;
+    font-size: 2.5em;
     margin-bottom: 0.5em;
+    color: #fff;
 }
 
-.user-about {
-    font-size: 1em;
-    color: #555;
+.user-navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: -1px;
+}
+
+.user-navbar-tab {
+    display: flex;
+    align-items: center;
+    padding: 1.4em 2.5em;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: #fff;
+    font-size: 1.2em;
+}
+
+.user-navbar-tab:hover {
+    opacity: 0.8;
+}
+
+.user-navbar-tab-selected {
+    display: flex;
+    align-items: center;
+    padding: 1.4em 2.5em 1em;
+    border-bottom: 0.4em solid #fff;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: #fff;
+    font-size: 1.2em;
 }
