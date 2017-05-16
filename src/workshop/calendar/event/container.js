@@ -24,6 +24,6 @@ class EventContainer extends Component {
 
 
 export default connect(
-    state => state.calendarEvent,
+    state => state.workshop.calendar.event,
     actions
 )(EventContainer)

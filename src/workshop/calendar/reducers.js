@@ -1,44 +1,9 @@
-import { 
-    REQUEST_EVENTS, 
-    RECEIVE_EVENTS, 
-    EXPAND_EVENT 
-} from './actions'
+import { combineReducers } from 'redux'
+import { reducer as datesReducer } from './dates'
+import { reducer as eventReducer } from './event'
 
 
-const defaultState = {
-    fetching: true, 
-    events: [],
-    expandedEvent: {}
-}
-
-
-export default (state = defaultState, action) => {
-
-  switch (action.type) {
-
-    case REQUEST_EVENTS:
-      return {
-        ...state,
-        fetching: true
-      }
-
-    case RECEIVE_EVENTS:
-      return {
-        ...state,
-        fetching: false,
-        events: action.items
-      }
-
-    case EXPAND_EVENT:
-      return {
-        ...state,
-        expandedEvent: action.event.slug === state.expandedEvent.slug 
-                            ? {} : action.event
-      }
-
-    default:
-      return state
-
-  }
-
-}
+export default combineReducers({
+    dates: datesReducer, 
+    event: eventReducer, 
+})

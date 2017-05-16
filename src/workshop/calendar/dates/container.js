@@ -27,6 +27,6 @@ class CalendarContainer extends Component {
 
 
 export default connect(
-    state => state.workshop.calendar.calendar, 
+    state => state.workshop.calendar.dates, 
     actions
 )(CalendarContainer)

@@ -23,4 +23,7 @@ class WorkshopsContainer extends Component {
 }
 
 
-export default connect(state => state.related, actions)(WorkshopsContainer)
+export default connect(
+    state => state.workshop.related, 
+    actions
+)(WorkshopsContainer)

@@ -27,6 +27,6 @@ class WorkshopContainer extends Component {
 
 
 export default connect(
-    state => state.workshop, 
+    state => state.workshop.workshop, 
     actions
 )(WorkshopContainer)

@@ -1,3 +1,9 @@
+import { combineReducers } from 'redux'
+import { reducer as resourcesReducer } from './resources'
+import { reducer as communityReducer } from './community'
+import { reducer as calendarReducer } from './calendar'
+import { reducer as relatedReducer } from './related'
+
 import { 
     REQUEST_WORKSHOP, 
     RECEIVE_WORKSHOP,
@@ -14,7 +20,7 @@ const defaultState = {
 }
 
 
-export default (state = defaultState, action) => {
+const workshopReducer = (state = defaultState, action) => {
 
   switch (action.type) {
 
@@ -55,3 +61,12 @@ export default (state = defaultState, action) => {
   }
 
 }
+
+
+export default combineReducers({
+    workshop: workshopReducer, 
+    resources: resourcesReducer, 
+    calendar: calendarReducer, 
+    community: communityReducer, 
+    related: relatedReducer, 
+})

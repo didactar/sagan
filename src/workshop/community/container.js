@@ -27,6 +27,6 @@ class CommunityContainer extends Component {
 
 
 export default connect(
-    state => state.community,
+    state => state.workshop.community,
     actions
 )(CommunityContainer)
